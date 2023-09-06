@@ -1,0 +1,588 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DB46841C2AA81C3A00905B87 /* iOSBioGainsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB46841B2AA81C3A00905B87 /* iOSBioGainsApp.swift */; };
+		DB46841E2AA81C3A00905B87 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB46841D2AA81C3A00905B87 /* ContentView.swift */; };
+		DB4684202AA81C3A00905B87 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB46841F2AA81C3A00905B87 /* Assets.xcassets */; };
+		DB4684232AA81C3A00905B87 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB4684222AA81C3A00905B87 /* Preview Assets.xcassets */; };
+		DB46842D2AA81C3A00905B87 /* iOSBioGainsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB46842C2AA81C3A00905B87 /* iOSBioGainsTests.swift */; };
+		DB4684372AA81C3A00905B87 /* iOSBioGainsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4684362AA81C3A00905B87 /* iOSBioGainsUITests.swift */; };
+		DB4684392AA81C3A00905B87 /* iOSBioGainsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4684382AA81C3A00905B87 /* iOSBioGainsUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DB4684292AA81C3A00905B87 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DB4684102AA81C3A00905B87 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DB4684172AA81C3A00905B87;
+			remoteInfo = iOSBioGains;
+		};
+		DB4684332AA81C3A00905B87 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DB4684102AA81C3A00905B87 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DB4684172AA81C3A00905B87;
+			remoteInfo = iOSBioGains;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DB4684182AA81C3A00905B87 /* iOSBioGains.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSBioGains.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB46841B2AA81C3A00905B87 /* iOSBioGainsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSBioGainsApp.swift; sourceTree = "<group>"; };
+		DB46841D2AA81C3A00905B87 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		DB46841F2AA81C3A00905B87 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DB4684222AA81C3A00905B87 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		DB4684282AA81C3A00905B87 /* iOSBioGainsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSBioGainsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB46842C2AA81C3A00905B87 /* iOSBioGainsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSBioGainsTests.swift; sourceTree = "<group>"; };
+		DB4684322AA81C3A00905B87 /* iOSBioGainsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSBioGainsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB4684362AA81C3A00905B87 /* iOSBioGainsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSBioGainsUITests.swift; sourceTree = "<group>"; };
+		DB4684382AA81C3A00905B87 /* iOSBioGainsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSBioGainsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DB4684152AA81C3A00905B87 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DB4684252AA81C3A00905B87 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DB46842F2AA81C3A00905B87 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DB46840F2AA81C3A00905B87 = {
+			isa = PBXGroup;
+			children = (
+				DB46841A2AA81C3A00905B87 /* iOSBioGains */,
+				DB46842B2AA81C3A00905B87 /* iOSBioGainsTests */,
+				DB4684352AA81C3A00905B87 /* iOSBioGainsUITests */,
+				DB4684192AA81C3A00905B87 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DB4684192AA81C3A00905B87 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DB4684182AA81C3A00905B87 /* iOSBioGains.app */,
+				DB4684282AA81C3A00905B87 /* iOSBioGainsTests.xctest */,
+				DB4684322AA81C3A00905B87 /* iOSBioGainsUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DB46841A2AA81C3A00905B87 /* iOSBioGains */ = {
+			isa = PBXGroup;
+			children = (
+				DB46841B2AA81C3A00905B87 /* iOSBioGainsApp.swift */,
+				DB46841D2AA81C3A00905B87 /* ContentView.swift */,
+				DB46841F2AA81C3A00905B87 /* Assets.xcassets */,
+				DB4684212AA81C3A00905B87 /* Preview Content */,
+			);
+			path = iOSBioGains;
+			sourceTree = "<group>";
+		};
+		DB4684212AA81C3A00905B87 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				DB4684222AA81C3A00905B87 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		DB46842B2AA81C3A00905B87 /* iOSBioGainsTests */ = {
+			isa = PBXGroup;
+			children = (
+				DB46842C2AA81C3A00905B87 /* iOSBioGainsTests.swift */,
+			);
+			path = iOSBioGainsTests;
+			sourceTree = "<group>";
+		};
+		DB4684352AA81C3A00905B87 /* iOSBioGainsUITests */ = {
+			isa = PBXGroup;
+			children = (
+				DB4684362AA81C3A00905B87 /* iOSBioGainsUITests.swift */,
+				DB4684382AA81C3A00905B87 /* iOSBioGainsUITestsLaunchTests.swift */,
+			);
+			path = iOSBioGainsUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DB4684172AA81C3A00905B87 /* iOSBioGains */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DB46843C2AA81C3A00905B87 /* Build configuration list for PBXNativeTarget "iOSBioGains" */;
+			buildPhases = (
+				DB4684142AA81C3A00905B87 /* Sources */,
+				DB4684152AA81C3A00905B87 /* Frameworks */,
+				DB4684162AA81C3A00905B87 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = iOSBioGains;
+			productName = iOSBioGains;
+			productReference = DB4684182AA81C3A00905B87 /* iOSBioGains.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DB4684272AA81C3A00905B87 /* iOSBioGainsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DB46843F2AA81C3A00905B87 /* Build configuration list for PBXNativeTarget "iOSBioGainsTests" */;
+			buildPhases = (
+				DB4684242AA81C3A00905B87 /* Sources */,
+				DB4684252AA81C3A00905B87 /* Frameworks */,
+				DB4684262AA81C3A00905B87 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DB46842A2AA81C3A00905B87 /* PBXTargetDependency */,
+			);
+			name = iOSBioGainsTests;
+			productName = iOSBioGainsTests;
+			productReference = DB4684282AA81C3A00905B87 /* iOSBioGainsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		DB4684312AA81C3A00905B87 /* iOSBioGainsUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DB4684422AA81C3A00905B87 /* Build configuration list for PBXNativeTarget "iOSBioGainsUITests" */;
+			buildPhases = (
+				DB46842E2AA81C3A00905B87 /* Sources */,
+				DB46842F2AA81C3A00905B87 /* Frameworks */,
+				DB4684302AA81C3A00905B87 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DB4684342AA81C3A00905B87 /* PBXTargetDependency */,
+			);
+			name = iOSBioGainsUITests;
+			productName = iOSBioGainsUITests;
+			productReference = DB4684322AA81C3A00905B87 /* iOSBioGainsUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DB4684102AA81C3A00905B87 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					DB4684172AA81C3A00905B87 = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
+					DB4684272AA81C3A00905B87 = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = DB4684172AA81C3A00905B87;
+					};
+					DB4684312AA81C3A00905B87 = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = DB4684172AA81C3A00905B87;
+					};
+				};
+			};
+			buildConfigurationList = DB4684132AA81C3A00905B87 /* Build configuration list for PBXProject "iOSBioGains" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DB46840F2AA81C3A00905B87;
+			productRefGroup = DB4684192AA81C3A00905B87 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DB4684172AA81C3A00905B87 /* iOSBioGains */,
+				DB4684272AA81C3A00905B87 /* iOSBioGainsTests */,
+				DB4684312AA81C3A00905B87 /* iOSBioGainsUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DB4684162AA81C3A00905B87 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB4684232AA81C3A00905B87 /* Preview Assets.xcassets in Resources */,
+				DB4684202AA81C3A00905B87 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DB4684262AA81C3A00905B87 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DB4684302AA81C3A00905B87 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DB4684142AA81C3A00905B87 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB46841E2AA81C3A00905B87 /* ContentView.swift in Sources */,
+				DB46841C2AA81C3A00905B87 /* iOSBioGainsApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DB4684242AA81C3A00905B87 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB46842D2AA81C3A00905B87 /* iOSBioGainsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DB46842E2AA81C3A00905B87 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB4684392AA81C3A00905B87 /* iOSBioGainsUITestsLaunchTests.swift in Sources */,
+				DB4684372AA81C3A00905B87 /* iOSBioGainsUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DB46842A2AA81C3A00905B87 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DB4684172AA81C3A00905B87 /* iOSBioGains */;
+			targetProxy = DB4684292AA81C3A00905B87 /* PBXContainerItemProxy */;
+		};
+		DB4684342AA81C3A00905B87 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DB4684172AA81C3A00905B87 /* iOSBioGains */;
+			targetProxy = DB4684332AA81C3A00905B87 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		DB46843A2AA81C3A00905B87 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DB46843B2AA81C3A00905B87 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DB46843D2AA81C3A00905B87 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"iOSBioGains/Preview Content\"";
+				DEVELOPMENT_TEAM = 25BK2A3LZ7;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.AlvinEscobar.iOSBioGains;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DB46843E2AA81C3A00905B87 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"iOSBioGains/Preview Content\"";
+				DEVELOPMENT_TEAM = 25BK2A3LZ7;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.AlvinEscobar.iOSBioGains;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		DB4684402AA81C3A00905B87 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 25BK2A3LZ7;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.AlvinEscobar.iOSBioGainsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iOSBioGains.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/iOSBioGains";
+			};
+			name = Debug;
+		};
+		DB4684412AA81C3A00905B87 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 25BK2A3LZ7;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.AlvinEscobar.iOSBioGainsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iOSBioGains.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/iOSBioGains";
+			};
+			name = Release;
+		};
+		DB4684432AA81C3A00905B87 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 25BK2A3LZ7;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.AlvinEscobar.iOSBioGainsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = iOSBioGains;
+			};
+			name = Debug;
+		};
+		DB4684442AA81C3A00905B87 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 25BK2A3LZ7;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.AlvinEscobar.iOSBioGainsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = iOSBioGains;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DB4684132AA81C3A00905B87 /* Build configuration list for PBXProject "iOSBioGains" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DB46843A2AA81C3A00905B87 /* Debug */,
+				DB46843B2AA81C3A00905B87 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DB46843C2AA81C3A00905B87 /* Build configuration list for PBXNativeTarget "iOSBioGains" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DB46843D2AA81C3A00905B87 /* Debug */,
+				DB46843E2AA81C3A00905B87 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DB46843F2AA81C3A00905B87 /* Build configuration list for PBXNativeTarget "iOSBioGainsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DB4684402AA81C3A00905B87 /* Debug */,
+				DB4684412AA81C3A00905B87 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DB4684422AA81C3A00905B87 /* Build configuration list for PBXNativeTarget "iOSBioGainsUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DB4684432AA81C3A00905B87 /* Debug */,
+				DB4684442AA81C3A00905B87 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DB4684102AA81C3A00905B87 /* Project object */;
+}
