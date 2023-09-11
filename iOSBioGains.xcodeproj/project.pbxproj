@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		DB1B25872AA97FD90056055B /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1B25862AA97FD90056055B /* LoginView.swift */; };
 		DB46841C2AA81C3A00905B87 /* iOSBioGainsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB46841B2AA81C3A00905B87 /* iOSBioGainsApp.swift */; };
-		DB46841E2AA81C3A00905B87 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB46841D2AA81C3A00905B87 /* ContentView.swift */; };
 		DB4684202AA81C3A00905B87 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB46841F2AA81C3A00905B87 /* Assets.xcassets */; };
 		DB4684232AA81C3A00905B87 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB4684222AA81C3A00905B87 /* Preview Assets.xcassets */; };
 		DB46842D2AA81C3A00905B87 /* iOSBioGainsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB46842C2AA81C3A00905B87 /* iOSBioGainsTests.swift */; };
@@ -40,7 +39,6 @@
 		DB1B25862AA97FD90056055B /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		DB4684182AA81C3A00905B87 /* iOSBioGains.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSBioGains.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB46841B2AA81C3A00905B87 /* iOSBioGainsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSBioGainsApp.swift; sourceTree = "<group>"; };
-		DB46841D2AA81C3A00905B87 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		DB46841F2AA81C3A00905B87 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DB4684222AA81C3A00905B87 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DB4684282AA81C3A00905B87 /* iOSBioGainsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSBioGainsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -102,13 +100,12 @@
 			isa = PBXGroup;
 			children = (
 				DB5201C22AAEBB8C00979DAF /* Info.plist */,
-				DB46841B2AA81C3A00905B87 /* iOSBioGainsApp.swift */,
 				DB5201BE2AAEB91E00979DAF /* AppDelegate.swift */,
-				DB46841D2AA81C3A00905B87 /* ContentView.swift */,
+				DB5201C02AAEBA2900979DAF /* SceneDelegate.swift */,
+				DB46841B2AA81C3A00905B87 /* iOSBioGainsApp.swift */,
+				DB1B25862AA97FD90056055B /* LoginView.swift */,
 				DB46841F2AA81C3A00905B87 /* Assets.xcassets */,
 				DB4684212AA81C3A00905B87 /* Preview Content */,
-				DB1B25862AA97FD90056055B /* LoginView.swift */,
-				DB5201C02AAEBA2900979DAF /* SceneDelegate.swift */,
 			);
 			path = iOSBioGains;
 			sourceTree = "<group>";
@@ -271,7 +268,6 @@
 				DB5201C12AAEBA2900979DAF /* SceneDelegate.swift in Sources */,
 				DB5201BF2AAEB91E00979DAF /* AppDelegate.swift in Sources */,
 				DB1B25872AA97FD90056055B /* LoginView.swift in Sources */,
-				DB46841E2AA81C3A00905B87 /* ContentView.swift in Sources */,
 				DB46841C2AA81C3A00905B87 /* iOSBioGainsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
