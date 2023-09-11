@@ -16,6 +16,7 @@
 		DB4684372AA81C3A00905B87 /* iOSBioGainsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4684362AA81C3A00905B87 /* iOSBioGainsUITests.swift */; };
 		DB4684392AA81C3A00905B87 /* iOSBioGainsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4684382AA81C3A00905B87 /* iOSBioGainsUITestsLaunchTests.swift */; };
 		DB5201BF2AAEB91E00979DAF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5201BE2AAEB91E00979DAF /* AppDelegate.swift */; };
+		DB5201C12AAEBA2900979DAF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5201C02AAEBA2900979DAF /* SceneDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		DB4684362AA81C3A00905B87 /* iOSBioGainsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSBioGainsUITests.swift; sourceTree = "<group>"; };
 		DB4684382AA81C3A00905B87 /* iOSBioGainsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSBioGainsUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		DB5201BE2AAEB91E00979DAF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DB5201C02AAEBA2900979DAF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 				DB46841F2AA81C3A00905B87 /* Assets.xcassets */,
 				DB4684212AA81C3A00905B87 /* Preview Content */,
 				DB1B25862AA97FD90056055B /* LoginView.swift */,
+				DB5201C02AAEBA2900979DAF /* SceneDelegate.swift */,
 			);
 			path = iOSBioGains;
 			sourceTree = "<group>";
@@ -263,6 +266,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB5201C12AAEBA2900979DAF /* SceneDelegate.swift in Sources */,
 				DB5201BF2AAEB91E00979DAF /* AppDelegate.swift in Sources */,
 				DB1B25872AA97FD90056055B /* LoginView.swift in Sources */,
 				DB46841E2AA81C3A00905B87 /* ContentView.swift in Sources */,
