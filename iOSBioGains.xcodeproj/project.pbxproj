@@ -97,10 +97,10 @@
 		DB46841A2AA81C3A00905B87 /* iOSBioGains */ = {
 			isa = PBXGroup;
 			children = (
+				DB5201C32AB00BAF00979DAF /* UI */,
 				DB5201C22AAEBB8C00979DAF /* Info.plist */,
 				DB5201BE2AAEB91E00979DAF /* AppDelegate.swift */,
 				DB5201C02AAEBA2900979DAF /* SceneDelegate.swift */,
-				DB1B25862AA97FD90056055B /* LoginView.swift */,
 				DB46841F2AA81C3A00905B87 /* Assets.xcassets */,
 				DB4684212AA81C3A00905B87 /* Preview Content */,
 			);
@@ -130,6 +130,30 @@
 				DB4684382AA81C3A00905B87 /* iOSBioGainsUITestsLaunchTests.swift */,
 			);
 			path = iOSBioGainsUITests;
+			sourceTree = "<group>";
+		};
+		DB5201C32AB00BAF00979DAF /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				DB5201C52AB00BBD00979DAF /* UIKit */,
+				DB5201C42AB00BB500979DAF /* SwiftUI */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		DB5201C42AB00BB500979DAF /* SwiftUI */ = {
+			isa = PBXGroup;
+			children = (
+				DB1B25862AA97FD90056055B /* LoginView.swift */,
+			);
+			path = SwiftUI;
+			sourceTree = "<group>";
+		};
+		DB5201C52AB00BBD00979DAF /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UIKit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
