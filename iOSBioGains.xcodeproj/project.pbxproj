@@ -15,6 +15,7 @@
 		DB4684392AA81C3A00905B87 /* iOSBioGainsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4684382AA81C3A00905B87 /* iOSBioGainsUITestsLaunchTests.swift */; };
 		DB5201BF2AAEB91E00979DAF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5201BE2AAEB91E00979DAF /* AppDelegate.swift */; };
 		DB5201C12AAEBA2900979DAF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5201C02AAEBA2900979DAF /* SceneDelegate.swift */; };
+		DB5201C72AB00C1700979DAF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5201C62AB00C1700979DAF /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		DB5201BE2AAEB91E00979DAF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DB5201C02AAEBA2900979DAF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		DB5201C22AAEBB8C00979DAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		DB5201C62AB00C1700979DAF /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +154,7 @@
 		DB5201C52AB00BBD00979DAF /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				DB5201C62AB00C1700979DAF /* LoginViewController.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -286,6 +289,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB5201C72AB00C1700979DAF /* LoginViewController.swift in Sources */,
 				DB5201C12AAEBA2900979DAF /* SceneDelegate.swift in Sources */,
 				DB5201BF2AAEB91E00979DAF /* AppDelegate.swift in Sources */,
 				DB1B25872AA97FD90056055B /* LoginView.swift in Sources */,
