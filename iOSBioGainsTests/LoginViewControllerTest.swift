@@ -6,8 +6,15 @@
 //
 
 import XCTest
+@testable import iOSBioGains
 
 final class LoginViewControllerTest: XCTestCase {
 
-    
+    func test_viewDidLoad_EmailTextFieldPlaceholder() {
+        let sut = LoginViewController(emailPlaceholder: "Email")
+        
+        _ = sut.view
+        
+        XCTAssertEqual(sut.emailTextField.placeholder, "Email")
+    }
 }
