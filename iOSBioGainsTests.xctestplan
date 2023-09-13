@@ -1,0 +1,24 @@
+{
+  "configurations" : [
+    {
+      "id" : "9B95684E-8635-4074-A126-408C427E4E7F",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:iOSBioGains.xcodeproj",
+        "identifier" : "DB5202012AB1637D00979DAF",
+        "name" : "iOSBioGainsTests"
+      }
+    }
+  ],
+  "version" : 1
+}

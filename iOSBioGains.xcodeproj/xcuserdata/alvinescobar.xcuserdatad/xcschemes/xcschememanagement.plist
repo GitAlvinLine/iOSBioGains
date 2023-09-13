@@ -9,10 +9,20 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>iOSBioGainsTests.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>DB4684172AA81C3A00905B87</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DB5201D62AB15EA600979DAF</key>
 		<dict>
 			<key>primary</key>
 			<true/>
