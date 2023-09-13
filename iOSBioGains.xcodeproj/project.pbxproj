@@ -15,22 +15,11 @@
 		DB5201C72AB00C1700979DAF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5201C62AB00C1700979DAF /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		DB4684292AA81C3A00905B87 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = DB4684102AA81C3A00905B87 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = DB4684172AA81C3A00905B87;
-			remoteInfo = iOSBioGains;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		DB1B25862AA97FD90056055B /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		DB4684182AA81C3A00905B87 /* iOSBioGains.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSBioGains.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB46841F2AA81C3A00905B87 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DB4684222AA81C3A00905B87 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		DB4684282AA81C3A00905B87 /* iOSBioGainsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSBioGainsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB5201BE2AAEB91E00979DAF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DB5201C02AAEBA2900979DAF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		DB5201C22AAEBB8C00979DAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -39,13 +28,6 @@
 
 /* Begin PBXFrameworksBuildPhase section */
 		DB4684152AA81C3A00905B87 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DB4684252AA81C3A00905B87 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -67,7 +49,6 @@
 			isa = PBXGroup;
 			children = (
 				DB4684182AA81C3A00905B87 /* iOSBioGains.app */,
-				DB4684282AA81C3A00905B87 /* iOSBioGainsTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -138,24 +119,6 @@
 			productReference = DB4684182AA81C3A00905B87 /* iOSBioGains.app */;
 			productType = "com.apple.product-type.application";
 		};
-		DB4684272AA81C3A00905B87 /* iOSBioGainsTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = DB46843F2AA81C3A00905B87 /* Build configuration list for PBXNativeTarget "iOSBioGainsTests" */;
-			buildPhases = (
-				DB4684242AA81C3A00905B87 /* Sources */,
-				DB4684252AA81C3A00905B87 /* Frameworks */,
-				DB4684262AA81C3A00905B87 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				DB46842A2AA81C3A00905B87 /* PBXTargetDependency */,
-			);
-			name = iOSBioGainsTests;
-			productName = iOSBioGainsTests;
-			productReference = DB4684282AA81C3A00905B87 /* iOSBioGainsTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -168,10 +131,6 @@
 				TargetAttributes = {
 					DB4684172AA81C3A00905B87 = {
 						CreatedOnToolsVersion = 14.3.1;
-					};
-					DB4684272AA81C3A00905B87 = {
-						CreatedOnToolsVersion = 14.3.1;
-						TestTargetID = DB4684172AA81C3A00905B87;
 					};
 				};
 			};
@@ -189,7 +148,6 @@
 			projectRoot = "";
 			targets = (
 				DB4684172AA81C3A00905B87 /* iOSBioGains */,
-				DB4684272AA81C3A00905B87 /* iOSBioGainsTests */,
 			);
 		};
 /* End PBXProject section */
@@ -201,13 +159,6 @@
 			files = (
 				DB4684232AA81C3A00905B87 /* Preview Assets.xcassets in Resources */,
 				DB4684202AA81C3A00905B87 /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DB4684262AA81C3A00905B87 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,22 +176,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DB4684242AA81C3A00905B87 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		DB46842A2AA81C3A00905B87 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = DB4684172AA81C3A00905B87 /* iOSBioGains */;
-			targetProxy = DB4684292AA81C3A00905B87 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		DB46843A2AA81C3A00905B87 /* Debug */ = {
@@ -415,46 +351,6 @@
 			};
 			name = Release;
 		};
-		DB4684402AA81C3A00905B87 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 25BK2A3LZ7;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.AlvinEscobar.iOSBioGainsTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iOSBioGains.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/iOSBioGains";
-			};
-			name = Debug;
-		};
-		DB4684412AA81C3A00905B87 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 25BK2A3LZ7;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.AlvinEscobar.iOSBioGainsTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iOSBioGains.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/iOSBioGains";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -472,15 +368,6 @@
 			buildConfigurations = (
 				DB46843D2AA81C3A00905B87 /* Debug */,
 				DB46843E2AA81C3A00905B87 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		DB46843F2AA81C3A00905B87 /* Build configuration list for PBXNativeTarget "iOSBioGainsTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				DB4684402AA81C3A00905B87 /* Debug */,
-				DB4684412AA81C3A00905B87 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
