@@ -31,14 +31,18 @@ class LoginViewController: UIViewController {
         
         loginButton.setTitle(loginButtonText, for: .normal)
         
-        self.view.addSubview(emailTextField)
-        self.view.addSubview(passwordTextField)
-        self.view.addSubview(loginButton)
+        addListOfViews([emailTextField, passwordTextField, loginButton])
     }
     
     private func setPlaceholders(for textFields: [UITextField], with values: [String]) {
         for index in textFields.indices {
             textFields[index].placeholder = values[index]
+        }
+    }
+    
+    private func addListOfViews(_ views: [UIView]) {
+        views.forEach { view in
+            self.view.addSubview(view)
         }
     }
     
