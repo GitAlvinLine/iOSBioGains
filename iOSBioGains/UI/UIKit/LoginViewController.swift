@@ -24,8 +24,13 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.emailTextField.placeholder = emailPlaceholder
-        self.passwordTextField.placeholder = passwordPlaceholder
+        setPlaceholders(for: [emailTextField, passwordTextField], with: ["Email", "Password"])
+    }
+    
+    private func setPlaceholders(for textFields: [UITextField], with values: [String]) {
+        for index in textFields.indices {
+            textFields[index].placeholder = values[index]
+        }
     }
     
 }
