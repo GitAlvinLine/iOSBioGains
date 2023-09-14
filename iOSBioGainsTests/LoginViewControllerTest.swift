@@ -22,6 +22,11 @@ final class LoginViewControllerTest: XCTestCase {
         XCTAssertEqual(makeSUT().loginButton.titleLabel?.text, "Login")
     }
     
+    func test_viewDidLoad_RendersEmptyTextFields() {
+        XCTAssertTrue(((makeSUT().emailTextField.text?.isEmpty) != nil))
+        XCTAssertTrue(((makeSUT().passwordTextField.text?.isEmpty) != nil))
+    }
+    
     // MARK: - Helper
     
     private func makeSUT() -> LoginViewController {
