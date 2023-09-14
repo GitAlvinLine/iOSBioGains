@@ -27,6 +27,10 @@ final class LoginViewControllerTest: XCTestCase {
         XCTAssertEqual(makeSUT().loginButton.titleLabel?.text, "Login")
     }
     
+    func test_viewDidLoad_AddsAllSubviewsToView() {
+        XCTAssertEqual(makeSUT().view.subviews.count, 3)
+    }
+    
     // MARK: - Helper
     
     private func makeSUT() -> LoginViewController {

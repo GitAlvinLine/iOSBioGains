@@ -30,6 +30,10 @@ class LoginViewController: UIViewController {
         setPlaceholders(for: [emailTextField, passwordTextField], with: ["Email", "Password"])
         
         loginButton.setTitle(loginButtonText, for: .normal)
+        
+        self.view.addSubview(emailTextField)
+        self.view.addSubview(passwordTextField)
+        self.view.addSubview(loginButton)
     }
     
     private func setPlaceholders(for textFields: [UITextField], with values: [String]) {
