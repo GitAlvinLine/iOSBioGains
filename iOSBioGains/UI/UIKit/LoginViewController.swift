@@ -11,20 +11,25 @@ class LoginViewController: UIViewController {
     
     let emailTextField: UITextField = UITextField()
     let passwordTextField: UITextField = UITextField()
+    let loginButton: UIButton = UIButton()
     
     private var emailPlaceholder: String = ""
     private var passwordPlaceholder: String = ""
+    private var loginButtonText: String = ""
     
-    convenience init(emailPlaceholder: String, passwordPlaceholder: String) {
+    convenience init(emailPlaceholder: String, passwordPlaceholder: String, loginButtonText: String) {
         self.init()
         self.emailPlaceholder = emailPlaceholder
         self.passwordPlaceholder = passwordPlaceholder
+        self.loginButtonText = loginButtonText
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setPlaceholders(for: [emailTextField, passwordTextField], with: ["Email", "Password"])
+        
+        loginButton.setTitle(loginButtonText, for: .normal)
     }
     
     private func setPlaceholders(for textFields: [UITextField], with values: [String]) {

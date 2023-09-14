@@ -11,7 +11,7 @@ import XCTest
 final class LoginViewControllerTest: XCTestCase {
 
     func test_viewDidLoad_RendersEmailTextFieldPlaceholder() {
-        let sut = LoginViewController(emailPlaceholder: "Email", passwordPlaceholder: "")
+        let sut = LoginViewController(emailPlaceholder: "Email", passwordPlaceholder: "", loginButtonText: "")
         
         _ = sut.view
         
@@ -19,10 +19,18 @@ final class LoginViewControllerTest: XCTestCase {
     }
     
     func test_viewDidLoad_RendersPasswordTextFieldPlaceholder() {
-        let sut = LoginViewController(emailPlaceholder: "Email", passwordPlaceholder: "Password")
+        let sut = LoginViewController(emailPlaceholder: "Email", passwordPlaceholder: "Password", loginButtonText: "")
         
         _ = sut.view
         
         XCTAssertEqual(sut.passwordTextField.placeholder, "Password")
+    }
+    
+    func test_viewDidLoad_RendersLoginButtonText() {
+        let sut = LoginViewController(emailPlaceholder: "", passwordPlaceholder: "", loginButtonText: "Login")
+        
+        _ = sut.view
+        
+        XCTAssertEqual(sut.loginButton.titleLabel?.text, "Login")
     }
 }
