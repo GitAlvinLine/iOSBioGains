@@ -18,13 +18,13 @@ final class LoginViewControllerTest: XCTestCase {
         XCTAssertEqual(makeSUT().passwordTextField.placeholder, "Password")
     }
     
-    func test_viewDidLoad_RendersLoginButtonText() {
-        XCTAssertEqual(makeSUT().loginButton.titleLabel?.text, "Login")
+    func test_viewDidLoad_RendersEmptyTextFieldValues() {
+        XCTAssertEqual(makeSUT().emailTextField.text, "")
+        XCTAssertEqual(makeSUT().passwordTextField.text, "")
     }
     
-    func test_viewDidLoad_RendersEmptyTextFields() {
-        XCTAssertTrue(((makeSUT().emailTextField.text?.isEmpty) != nil))
-        XCTAssertTrue(((makeSUT().passwordTextField.text?.isEmpty) != nil))
+    func test_viewDidLoad_RendersLoginButtonText() {
+        XCTAssertEqual(makeSUT().loginButton.titleLabel?.text, "Login")
     }
     
     // MARK: - Helper
