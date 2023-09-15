@@ -7,6 +7,7 @@
 
 import XCTest
 import UIKit
+@testable import iOSBioGains
 
 final class CustomTextFieldTest: XCTestCase {
     
