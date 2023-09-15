@@ -12,8 +12,14 @@ import UIKit
 final class CustomTextFieldTest: XCTestCase {
     
     func test_init_withPlaceholder() {
-        let sut = CustomTextField(placeholder: "Email")
+        let sut = CustomTextField(placeholder: "Email", keyboardType: .emailAddress)
         
         XCTAssertEqual(sut.placeholder, "Email")
+    }
+    
+    func test_init_setKeyboardType() {
+        let sut = CustomTextField(placeholder: "Email", keyboardType: .emailAddress)
+        
+        XCTAssertEqual(sut.keyboardType, .emailAddress)
     }
 }

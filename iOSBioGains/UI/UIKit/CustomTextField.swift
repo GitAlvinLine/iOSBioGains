@@ -9,16 +9,17 @@ import UIKit
 import SwiftUI
 
 class CustomTextField: UITextField {
-    convenience init(placeholder: String) {
+    convenience init(placeholder: String, keyboardType: UIKeyboardType) {
         self.init()
         self.placeholder = placeholder
+        self.keyboardType = keyboardType
     }
 }
 
 struct CustomTextFieldView: UIViewRepresentable {
     
     func makeUIView(context: Context) -> CustomTextField {
-        return CustomTextField(placeholder: "Email")
+        return CustomTextField(placeholder: "Email", keyboardType: .emailAddress)
     }
     
     func updateUIView(_ uiView: CustomTextField, context: Context) {
