@@ -14,6 +14,7 @@
 		DB5201C12AAEBA2900979DAF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5201C02AAEBA2900979DAF /* SceneDelegate.swift */; };
 		DB5201C72AB00C1700979DAF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5201C62AB00C1700979DAF /* LoginViewController.swift */; };
 		DB5202122AB16E1900979DAF /* LoginViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5202112AB16E1900979DAF /* LoginViewControllerTest.swift */; };
+		DB5202142AB3C68600979DAF /* CustomTextFieldTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5202132AB3C68600979DAF /* CustomTextFieldTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,8 +37,9 @@
 		DB5201C22AAEBB8C00979DAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		DB5201C62AB00C1700979DAF /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		DB5202022AB1637D00979DAF /* iOSBioGainsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSBioGainsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		DB52020E2AB164E200979DAF /* iOSBioGainsTests.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = file; path = iOSBioGainsTests.xctestplan; sourceTree = SOURCE_ROOT; };
+		DB52020E2AB164E200979DAF /* iOSBioGainsTests.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = iOSBioGainsTests.xctestplan; sourceTree = SOURCE_ROOT; };
 		DB5202112AB16E1900979DAF /* LoginViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewControllerTest.swift; sourceTree = "<group>"; };
+		DB5202132AB3C68600979DAF /* CustomTextFieldTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextFieldTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +129,7 @@
 			children = (
 				DB52020E2AB164E200979DAF /* iOSBioGainsTests.xctestplan */,
 				DB5202112AB16E1900979DAF /* LoginViewControllerTest.swift */,
+				DB5202132AB3C68600979DAF /* CustomTextFieldTest.swift */,
 			);
 			path = iOSBioGainsTests;
 			sourceTree = "<group>";
@@ -243,6 +246,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB5202142AB3C68600979DAF /* CustomTextFieldTest.swift in Sources */,
 				DB5202122AB16E1900979DAF /* LoginViewControllerTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
