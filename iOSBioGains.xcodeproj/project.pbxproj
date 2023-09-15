@@ -15,6 +15,7 @@
 		DB5201C72AB00C1700979DAF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5201C62AB00C1700979DAF /* LoginViewController.swift */; };
 		DB5202122AB16E1900979DAF /* LoginViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5202112AB16E1900979DAF /* LoginViewControllerTest.swift */; };
 		DB5202142AB3C68600979DAF /* CustomTextFieldTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5202132AB3C68600979DAF /* CustomTextFieldTest.swift */; };
+		DBC777EE2AB3E63A00238A5F /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC777ED2AB3E63A00238A5F /* CustomTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		DB52020E2AB164E200979DAF /* iOSBioGainsTests.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = iOSBioGainsTests.xctestplan; sourceTree = SOURCE_ROOT; };
 		DB5202112AB16E1900979DAF /* LoginViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewControllerTest.swift; sourceTree = "<group>"; };
 		DB5202132AB3C68600979DAF /* CustomTextFieldTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextFieldTest.swift; sourceTree = "<group>"; };
+		DBC777ED2AB3E63A00238A5F /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				DB5201C62AB00C1700979DAF /* LoginViewController.swift */,
+				DBC777ED2AB3E63A00238A5F /* CustomTextField.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -239,6 +242,7 @@
 				DB5201C12AAEBA2900979DAF /* SceneDelegate.swift in Sources */,
 				DB5201BF2AAEB91E00979DAF /* AppDelegate.swift in Sources */,
 				DB1B25872AA97FD90056055B /* LoginView.swift in Sources */,
+				DBC777EE2AB3E63A00238A5F /* CustomTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
