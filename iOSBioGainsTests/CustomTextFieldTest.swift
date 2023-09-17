@@ -12,28 +12,29 @@ import UIKit
 final class CustomTextFieldTest: XCTestCase {
     
     func test_init_withPlaceholder() {
-        let sut = CustomTextField(placeholder: "Email", keyboardType: .emailAddress)
-        
-        XCTAssertEqual(sut.placeholder, "Email")
+        XCTAssertEqual(makeSUT().placeholder, "Email")
     }
     
     func test_init_setKeyboardType() {
-        let sut = CustomTextField(placeholder: "Email", keyboardType: .emailAddress)
-        
-        XCTAssertEqual(sut.keyboardType, .emailAddress)
+        XCTAssertEqual(makeSUT().keyboardType, .emailAddress)
     }
     
     func test_init_setSecureTextEntry() {
-        let sut = CustomTextField(placeholder: "Email", keyboardType: .emailAddress, secureTextEntry: true)
+        let sut = makeSUT(isSecureTextEntry: true)
         
         XCTAssertEqual(sut.isSecureTextEntry, true)
-        
-        let sut2 = CustomTextField(placeholder: "Email", keyboardType: .emailAddress)
-        
-        XCTAssertEqual(sut2.isSecureTextEntry, false)
+        XCTAssertEqual(makeSUT().isSecureTextEntry, false)
     }
     
     func test_init_configureWithBlackRoundedBorderUI() {
-        let sut = CustomTextField(placeholder: "Email", keyboardType: .emailAddress)
+        let sut = makeSUT()
+    }
+    
+    // MARK: Helper
+    
+    private func makeSUT(isSecureTextEntry: Bool = false) -> CustomTextField {
+        return CustomTextField(placeholder: "Email",
+                               keyboardType: .emailAddress,
+                               secureTextEntry: isSecureTextEntry)
     }
 }
