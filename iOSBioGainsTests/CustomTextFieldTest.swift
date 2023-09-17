@@ -26,6 +26,10 @@ final class CustomTextFieldTest: XCTestCase {
         XCTAssertEqual(makeSUT().isSecureTextEntry, false)
     }
     
+    func test_init_setTranslatesAutoresizingMaskConstraintsToFalse() {
+        XCTAssertEqual(makeSUT().translatesAutoresizingMaskIntoConstraints, false)
+    }
+    
     // MARK: Helper
     
     private func makeSUT(isSecureTextEntry: Bool = false) -> CustomTextField {

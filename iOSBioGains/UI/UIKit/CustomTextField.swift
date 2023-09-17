@@ -14,6 +14,7 @@ class CustomTextField: UITextField {
         self.placeholder = placeholder
         self.keyboardType = keyboardType
         self.isSecureTextEntry = secureTextEntry
+        self.translatesAutoresizingMaskIntoConstraints = false
     }
 }
 
