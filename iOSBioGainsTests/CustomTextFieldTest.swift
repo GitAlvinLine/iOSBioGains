@@ -26,10 +26,6 @@ final class CustomTextFieldTest: XCTestCase {
         XCTAssertEqual(makeSUT().isSecureTextEntry, false)
     }
     
-    func test_init_configureWithBlackRoundedBorderUI() {
-        let sut = makeSUT()
-    }
-    
     // MARK: Helper
     
     private func makeSUT(isSecureTextEntry: Bool = false) -> CustomTextField {
