@@ -9,10 +9,11 @@ import UIKit
 import SwiftUI
 
 class CustomTextField: UITextField {
-    convenience init(placeholder: String, keyboardType: UIKeyboardType) {
+    convenience init(placeholder: String, keyboardType: UIKeyboardType, secureTextEntry: Bool = false) {
         self.init()
         self.placeholder = placeholder
         self.keyboardType = keyboardType
+        self.isSecureTextEntry = secureTextEntry
     }
 }
 
