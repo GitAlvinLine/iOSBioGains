@@ -126,8 +126,8 @@
 			isa = PBXGroup;
 			children = (
 				DB5201C62AB00C1700979DAF /* LoginViewController.swift */,
-				DBC777ED2AB3E63A00238A5F /* CustomTextField.swift */,
 				DB2AE1712AB75F29007F2907 /* LoginUIView.swift */,
+				DBC777ED2AB3E63A00238A5F /* CustomTextField.swift */,
 				DB2AE1752AB80FB7007F2907 /* CustomButton.swift */,
 			);
 			path = UIKit;
