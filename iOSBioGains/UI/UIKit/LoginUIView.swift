@@ -13,7 +13,7 @@ class LoginUIView: UIView {
     let emailTextField: CustomTextField = CustomTextField(placeholder: "Email",
                                                           keyboardType: .emailAddress)
     let passwordTextField: CustomTextField = CustomTextField(placeholder: "Password", keyboardType: .default, secureTextEntry: true)
-    let loginButton: UIButton = UIButton()
+    let loginButton: CustomButton = CustomButton(title: "Login")
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -36,11 +36,6 @@ class LoginUIView: UIView {
             passwordTextField.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20)
         ])
         
-        loginButton.setTitle("Login", for: .normal)
-        loginButton.setTitleColor(.white, for: .normal)
-        loginButton.backgroundColor = .blue
-        loginButton.layer.cornerRadius = 10
-        loginButton.translatesAutoresizingMaskIntoConstraints = false
         self.addSubview(loginButton)
         
         NSLayoutConstraint.activate([
