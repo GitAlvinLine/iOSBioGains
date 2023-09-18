@@ -40,7 +40,7 @@ class CustomTextField: UITextField {
     }
 }
 
-struct CustomTextFieldPreview: PreviewProvider {
+struct CustomTextField_Preview: PreviewProvider {
     private struct CustomTextFieldView: UIViewRepresentable {
         
         func makeUIView(context: Context) -> CustomTextField {
