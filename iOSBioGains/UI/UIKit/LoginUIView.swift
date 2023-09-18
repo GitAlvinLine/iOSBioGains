@@ -53,16 +53,16 @@ class LoginUIView: UIView {
     
 }
 
-struct LoginUIViewRepresentable: UIViewRepresentable {
-    
-    func makeUIView(context: Context) -> LoginUIView {
-        return LoginUIView()
+struct LoginUIViewPreview: PreviewProvider {
+    struct LoginUIViewRepresentable: UIViewRepresentable {
+        
+        func makeUIView(context: Context) -> LoginUIView {
+            return LoginUIView()
+        }
+        
+        func updateUIView(_ uiView: LoginUIView, context: Context) {}
     }
     
-    func updateUIView(_ uiView: LoginUIView, context: Context) {}
-}
-
-struct LoginUIViewPreview: PreviewProvider {
     static var previews: some View {
         LoginUIViewRepresentable()
             .ignoresSafeArea(.all)
