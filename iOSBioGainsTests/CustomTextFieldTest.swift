@@ -26,10 +26,6 @@ final class CustomTextFieldTest: XCTestCase {
         XCTAssertEqual(makeSUT().isSecureTextEntry, false)
     }
     
-    func test_init_setTranslatesAutoresizingMaskConstraintsToFalse() {
-        XCTAssertEqual(makeSUT().translatesAutoresizingMaskIntoConstraints, false)
-    }
-    
     func test_init_setBorderConfiguration() {
         let sut = makeSUT()
         
@@ -42,6 +38,10 @@ final class CustomTextFieldTest: XCTestCase {
         let preferredFont = UIFont.preferredFont(forTextStyle: .title3)
         
         XCTAssertEqual(sut.font, preferredFont)
+    }
+    
+    func test_init_setTranslatesAutoresizingMaskConstraintsToFalse() {
+        XCTAssertEqual(makeSUT().translatesAutoresizingMaskIntoConstraints, false)
     }
     
     // MARK: Helper
