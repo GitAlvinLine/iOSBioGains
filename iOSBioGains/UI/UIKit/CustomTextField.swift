@@ -9,12 +9,34 @@ import UIKit
 import SwiftUI
 
 class CustomTextField: UITextField {
+    let padding = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+    
     convenience init(placeholder: String, keyboardType: UIKeyboardType, secureTextEntry: Bool = false) {
         self.init()
         self.placeholder = placeholder
         self.keyboardType = keyboardType
         self.isSecureTextEntry = secureTextEntry
+        self.layer.borderWidth = 2
+        self.layer.cornerRadius = 10
+        self.font = UIFont.preferredFont(forTextStyle: .title3)
         self.translatesAutoresizingMaskIntoConstraints = false
+    }
+    
+    override func textRect(forBounds bounds: CGRect) -> CGRect {
+        return bounds.inset(by: padding)
+    }
+    
+    override func placeholderRect(forBounds bounds: CGRect) -> CGRect {
+        return bounds.inset(by: padding)
+    }
+    
+    override func editingRect(forBounds bounds: CGRect) -> CGRect {
+        return bounds.inset(by: padding)
+    }
+    
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        self.layer.borderColor = previousTraitCollection?.userInterfaceStyle == .light ? UIColor.black.cgColor : UIColor.white.cgColor
+        
     }
 }
 
@@ -33,5 +55,7 @@ struct CustomTextFieldView: UIViewRepresentable {
 struct CustomTextFieldPreview: PreviewProvider {
     static var previews: some View {
         CustomTextFieldView()
+            .padding()
+            .previewLayout(.fixed(width: 500, height: 100))
     }
 }
