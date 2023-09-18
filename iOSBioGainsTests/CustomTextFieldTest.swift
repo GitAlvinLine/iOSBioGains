@@ -44,6 +44,20 @@ final class CustomTextFieldTest: XCTestCase {
         XCTAssertEqual(makeSUT().translatesAutoresizingMaskIntoConstraints, false)
     }
     
+    func test_traitCollectionDidChange_setBorderColor() {
+        let sut = makeSUT()
+        let lightMode = UITraitCollection(userInterfaceStyle: .light)
+        let darkMode = UITraitCollection(userInterfaceStyle: .dark)
+        
+        sut.traitCollectionDidChange(lightMode)
+        
+        XCTAssertEqual(sut.layer.borderColor, UIColor.black.cgColor)
+        
+        sut.traitCollectionDidChange(darkMode)
+        
+        XCTAssertEqual(sut.layer.borderColor, UIColor.white.cgColor)
+    }
+    
     // MARK: Helper
     
     private func makeSUT(isSecureTextEntry: Bool = false) -> CustomTextField {
