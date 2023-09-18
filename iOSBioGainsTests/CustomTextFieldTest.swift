@@ -67,6 +67,18 @@ final class CustomTextFieldTest: XCTestCase {
         
     }
     
+    func test_editingRect_setInsetPadding() {
+        
+        let sut = makeSUT()
+        let padding = sut.padding
+        let sutRect = sut.bounds.inset(by: padding)
+        
+        let resultRect = sut.editingRect(forBounds: sut.frame)
+        
+        XCTAssertEqual(sutRect, resultRect)
+        
+    }
+    
     func test_traitCollectionDidChange_setBorderColor() {
         let sut = makeSUT()
         let lightMode = UITraitCollection(userInterfaceStyle: .light)
