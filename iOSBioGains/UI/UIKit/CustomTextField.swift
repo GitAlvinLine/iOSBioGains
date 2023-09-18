@@ -40,19 +40,19 @@ class CustomTextField: UITextField {
     }
 }
 
-struct CustomTextFieldView: UIViewRepresentable {
-    
-    func makeUIView(context: Context) -> CustomTextField {
-        return CustomTextField(placeholder: "Email", keyboardType: .emailAddress)
-    }
-    
-    func updateUIView(_ uiView: CustomTextField, context: Context) {
+struct CustomTextFieldPreview: PreviewProvider {
+    private struct CustomTextFieldView: UIViewRepresentable {
+        
+        func makeUIView(context: Context) -> CustomTextField {
+            return CustomTextField(placeholder: "Email", keyboardType: .emailAddress)
+        }
+        
+        func updateUIView(_ uiView: CustomTextField, context: Context) {
+            
+        }
         
     }
     
-}
-
-struct CustomTextFieldPreview: PreviewProvider {
     static var previews: some View {
         CustomTextFieldView()
             .padding()
