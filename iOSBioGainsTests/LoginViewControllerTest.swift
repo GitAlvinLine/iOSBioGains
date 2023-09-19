@@ -11,7 +11,7 @@ import XCTest
 final class LoginViewControllerTest: XCTestCase {
     
     func test_viewDidLoad_setLoginUIViewToSelfView() {
-        let sut = LoginViewController()
+        let sut = LoginViewController(tappedLogin: { _ in })
         let loginView: UIView = LoginUIView()
         _ = sut.view
         
