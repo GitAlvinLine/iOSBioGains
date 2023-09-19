@@ -12,6 +12,7 @@ class LoginViewController: UIViewController {
     private let loginView: LoginUIView = LoginUIView()
     var tappedLogin: ((LoginCredentials) -> Void)? = nil
     
+    private
     convenience init(tappedLogin: @escaping (LoginCredentials) -> Void) {
         self.init()
         self.tappedLogin = tappedLogin
