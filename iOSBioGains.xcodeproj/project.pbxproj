@@ -76,6 +76,34 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		DB2AE17A2AB94433007F2907 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DB2AE1712AB75F29007F2907 /* LoginUIView.swift */,
+				DBC777ED2AB3E63A00238A5F /* CustomTextField.swift */,
+				DB2AE1752AB80FB7007F2907 /* CustomButton.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		DB2AE17B2AB94450007F2907 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				DB5201C62AB00C1700979DAF /* LoginViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		DB2AE17C2AB94464007F2907 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				DB2AE1772AB91CD3007F2907 /* Model */,
+				DB2AE17A2AB94433007F2907 /* Views */,
+				DB2AE17B2AB94450007F2907 /* Controllers */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 		DB46840F2AA81C3A00905B87 = {
 			isa = PBXGroup;
 			children = (
@@ -135,11 +163,7 @@
 		DB5201C52AB00BBD00979DAF /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
-				DB2AE1772AB91CD3007F2907 /* Model */,
-				DB5201C62AB00C1700979DAF /* LoginViewController.swift */,
-				DB2AE1712AB75F29007F2907 /* LoginUIView.swift */,
-				DBC777ED2AB3E63A00238A5F /* CustomTextField.swift */,
-				DB2AE1752AB80FB7007F2907 /* CustomButton.swift */,
+				DB2AE17C2AB94464007F2907 /* Login */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
