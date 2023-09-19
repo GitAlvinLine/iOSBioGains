@@ -10,6 +10,7 @@
 		DB1B25872AA97FD90056055B /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1B25862AA97FD90056055B /* LoginView.swift */; };
 		DB2AE1722AB75F29007F2907 /* LoginUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2AE1712AB75F29007F2907 /* LoginUIView.swift */; };
 		DB2AE1762AB80FB7007F2907 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2AE1752AB80FB7007F2907 /* CustomButton.swift */; };
+		DB2AE1792AB91CE7007F2907 /* LoginCredentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2AE1782AB91CE7007F2907 /* LoginCredentials.swift */; };
 		DB4684202AA81C3A00905B87 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB46841F2AA81C3A00905B87 /* Assets.xcassets */; };
 		DB4684232AA81C3A00905B87 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB4684222AA81C3A00905B87 /* Preview Assets.xcassets */; };
 		DB5201BF2AAEB91E00979DAF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5201BE2AAEB91E00979DAF /* AppDelegate.swift */; };
@@ -34,6 +35,7 @@
 		DB1B25862AA97FD90056055B /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		DB2AE1712AB75F29007F2907 /* LoginUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUIView.swift; sourceTree = "<group>"; };
 		DB2AE1752AB80FB7007F2907 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		DB2AE1782AB91CE7007F2907 /* LoginCredentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCredentials.swift; sourceTree = "<group>"; };
 		DB4684182AA81C3A00905B87 /* iOSBioGains.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSBioGains.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB46841F2AA81C3A00905B87 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DB4684222AA81C3A00905B87 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -66,6 +68,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DB2AE1772AB91CD3007F2907 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DB2AE1782AB91CE7007F2907 /* LoginCredentials.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		DB46840F2AA81C3A00905B87 = {
 			isa = PBXGroup;
 			children = (
@@ -125,6 +135,7 @@
 		DB5201C52AB00BBD00979DAF /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				DB2AE1772AB91CD3007F2907 /* Model */,
 				DB5201C62AB00C1700979DAF /* LoginViewController.swift */,
 				DB2AE1712AB75F29007F2907 /* LoginUIView.swift */,
 				DBC777ED2AB3E63A00238A5F /* CustomTextField.swift */,
@@ -244,6 +255,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB2AE1792AB91CE7007F2907 /* LoginCredentials.swift in Sources */,
 				DB2AE1722AB75F29007F2907 /* LoginUIView.swift in Sources */,
 				DB5201C72AB00C1700979DAF /* LoginViewController.swift in Sources */,
 				DB5201C12AAEBA2900979DAF /* SceneDelegate.swift in Sources */,
