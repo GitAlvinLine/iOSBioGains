@@ -14,9 +14,12 @@ class LoginUIView: UIView {
                                                           keyboardType: .emailAddress)
     let passwordTextField: CustomTextField = CustomTextField(placeholder: "Password", keyboardType: .default, secureTextEntry: true)
     let loginButton: CustomButton = CustomButton(title: "Login")
+    let progressIndicator: CustomProgressView = CustomProgressView()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        
+        self.backgroundColor = UIScreen.main.traitCollection.userInterfaceStyle == .light ? .white : .black
         
         self.addSubview(emailTextField)
         
@@ -45,10 +48,23 @@ class LoginUIView: UIView {
             loginButton.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -20)
         ])
         
+        self.addSubview(progressIndicator)
+        
+        NSLayoutConstraint.activate([
+            progressIndicator.centerXAnchor.constraint(equalTo: self.centerXAnchor),
+            progressIndicator.centerYAnchor.constraint(equalTo: self.centerYAnchor),
+            progressIndicator.heightAnchor.constraint(equalToConstant: 20),
+            progressIndicator.widthAnchor.constraint(equalToConstant: 20)
+        ])
+        
     }
-    
+        
     required init?(coder: NSCoder) {
         super.init(coder: coder)
+    }
+    
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        self.backgroundColor = previousTraitCollection?.userInterfaceStyle == .light ? .black : .white
     }
     
 }

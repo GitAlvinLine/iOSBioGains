@@ -16,6 +16,7 @@ class CustomTextField: UITextField {
         self.placeholder = placeholder
         self.keyboardType = keyboardType
         self.isSecureTextEntry = secureTextEntry
+        self.layer.borderColor = UIScreen.main.traitCollection.userInterfaceStyle == .light ? UIColor.black.cgColor : UIColor.white.cgColor
         self.layer.borderWidth = 2
         self.layer.cornerRadius = 10
         self.font = UIFont.preferredFont(forTextStyle: .title3)
@@ -35,7 +36,7 @@ class CustomTextField: UITextField {
     }
     
     override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
-        self.layer.borderColor = previousTraitCollection?.userInterfaceStyle == .light ? UIColor.black.cgColor : UIColor.white.cgColor
+        self.layer.borderColor = previousTraitCollection?.userInterfaceStyle == .light ? UIColor.white.cgColor : UIColor.black.cgColor
         
     }
 }

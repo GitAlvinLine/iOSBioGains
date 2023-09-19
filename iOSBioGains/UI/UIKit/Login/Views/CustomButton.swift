@@ -12,20 +12,21 @@ class CustomButton: UIButton {
     convenience init(title: String) {
         self.init()
         self.setTitle(title, for: .normal)
-        self.setTitleColor(.black, for: .normal)
+        let systemColor = UIScreen.main.traitCollection.userInterfaceStyle == .light ? UIColor.black : UIColor.white
+        self.setTitleColor(systemColor, for: .normal)
         self.titleLabel?.font = UIFont.preferredFont(forTextStyle: .title3)
-        self.backgroundColor = .white
-        self.layer.borderColor = UIColor.black.cgColor
+        self.backgroundColor = UIScreen.main.traitCollection.userInterfaceStyle == .light ? .white : .black
+        self.layer.borderColor = UIScreen.main.traitCollection.userInterfaceStyle == .light ? UIColor.black.cgColor : UIColor.white.cgColor
         self.layer.borderWidth = 2
         self.layer.cornerRadius = 10
         self.translatesAutoresizingMaskIntoConstraints = false
     }
     
     override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
-        let bgColor = previousTraitCollection?.userInterfaceStyle == .light ? UIColor.white : UIColor.black
+        let bgColor = previousTraitCollection?.userInterfaceStyle == .light ? UIColor.black : UIColor.white
         self.backgroundColor = bgColor
         
-        let titleColor = previousTraitCollection?.userInterfaceStyle == .light ? UIColor.black : UIColor.white
+        let titleColor = previousTraitCollection?.userInterfaceStyle == .light ? UIColor.white : UIColor.black
         self.setTitleColor(titleColor, for: .normal)
         self.layer.borderColor = titleColor.cgColor
     }
