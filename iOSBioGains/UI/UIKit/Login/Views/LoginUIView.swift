@@ -25,7 +25,7 @@ class LoginUIView: UIView {
         
         NSLayoutConstraint.activate([
             emailTextField.centerXAnchor.constraint(equalTo: self.centerXAnchor),
-            emailTextField.centerYAnchor.constraint(equalTo: self.centerYAnchor),
+            emailTextField.centerYAnchor.constraint(equalTo: self.centerYAnchor, constant: -80),
             emailTextField.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
             emailTextField.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20)
         ])
