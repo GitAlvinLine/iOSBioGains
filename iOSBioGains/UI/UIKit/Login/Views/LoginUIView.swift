@@ -45,7 +45,7 @@ class LoginUIView: UIView {
             loginButton.heightAnchor.constraint(equalToConstant: 50),
             loginButton.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
             loginButton.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20),
-            loginButton.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -20)
+            loginButton.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor, constant: -20)
         ])
         
         self.addSubview(progressIndicator)
