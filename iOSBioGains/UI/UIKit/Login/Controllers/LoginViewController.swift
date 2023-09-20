@@ -7,7 +7,7 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, UITextFieldDelegate {
     
     private let loginView: LoginUIView = LoginUIView()
     var tappedLogin: ((LoginCredentials) -> Void)? = nil
@@ -21,6 +21,8 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view = loginView
+        self.loginView.emailTextField.delegate = self
+        self.loginView.passwordTextField.delegate = self
     }
     
 }
