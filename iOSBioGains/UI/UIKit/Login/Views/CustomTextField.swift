@@ -15,6 +15,7 @@ class CustomTextField: UITextField {
         self.init()
         self.placeholder = placeholder
         self.keyboardType = keyboardType
+        self.returnKeyType = .done
         self.isSecureTextEntry = secureTextEntry
         self.layer.borderColor = UIScreen.main.traitCollection.userInterfaceStyle == .light ? UIColor.black.cgColor : UIColor.white.cgColor
         self.layer.borderWidth = 2
