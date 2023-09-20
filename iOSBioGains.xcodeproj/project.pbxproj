@@ -15,6 +15,7 @@
 		DB2AE1812ABA8C12007F2907 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = DB2AE1802ABA8C12007F2907 /* Realm */; };
 		DB2AE1832ABA8C12007F2907 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = DB2AE1822ABA8C12007F2907 /* RealmSwift */; };
 		DB2AE1862ABA8EFA007F2907 /* AuthenticatorClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2AE1852ABA8EFA007F2907 /* AuthenticatorClient.swift */; };
+		DB2AE1882ABA9050007F2907 /* RealmAuthenticatorClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2AE1872ABA9050007F2907 /* RealmAuthenticatorClient.swift */; };
 		DB4684202AA81C3A00905B87 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB46841F2AA81C3A00905B87 /* Assets.xcassets */; };
 		DB4684232AA81C3A00905B87 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB4684222AA81C3A00905B87 /* Preview Assets.xcassets */; };
 		DB5201BF2AAEB91E00979DAF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5201BE2AAEB91E00979DAF /* AppDelegate.swift */; };
@@ -42,6 +43,7 @@
 		DB2AE1782AB91CE7007F2907 /* LoginCredentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCredentials.swift; sourceTree = "<group>"; };
 		DB2AE17D2AB944A8007F2907 /* CustomProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomProgressView.swift; sourceTree = "<group>"; };
 		DB2AE1852ABA8EFA007F2907 /* AuthenticatorClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticatorClient.swift; sourceTree = "<group>"; };
+		DB2AE1872ABA9050007F2907 /* RealmAuthenticatorClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmAuthenticatorClient.swift; sourceTree = "<group>"; };
 		DB4684182AA81C3A00905B87 /* iOSBioGains.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSBioGains.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB46841F2AA81C3A00905B87 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DB4684222AA81C3A00905B87 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				DB2AE1852ABA8EFA007F2907 /* AuthenticatorClient.swift */,
+				DB2AE1872ABA9050007F2907 /* RealmAuthenticatorClient.swift */,
 			);
 			path = AuthenticationFeature;
 			sourceTree = "<group>";
@@ -314,6 +317,7 @@
 				DB2AE1762AB80FB7007F2907 /* CustomButton.swift in Sources */,
 				DB1B25872AA97FD90056055B /* LoginView.swift in Sources */,
 				DBC777EE2AB3E63A00238A5F /* CustomTextField.swift in Sources */,
+				DB2AE1882ABA9050007F2907 /* RealmAuthenticatorClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
