@@ -14,6 +14,11 @@ class HomeViewController: UIViewController {
     let logoutButton: CustomButton = CustomButton(title: "Log Out")
     var tappedLogOut: (() -> Void)? = nil
     
+    convenience init(tappedLogOut: @escaping () -> Void) {
+        self.init()
+        self.tappedLogOut = tappedLogOut
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .white

@@ -19,8 +19,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         if app.currentUser != nil {
             // user is logged in
             let window = UIWindow(windowScene: windowScene)
-            window.rootViewController = LoginViewController { loginCredentials in
-                
+            window.rootViewController = HomeViewController {
+                // user tapped log out
             }
             self.window = window
             window.makeKeyAndVisible()
