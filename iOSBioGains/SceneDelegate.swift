@@ -16,7 +16,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = scene as? UIWindowScene else { return }
         
         let app = App(id: "application-0-zyajh")
-        if let user = app.currentUser {
+        if app.currentUser != nil {
             // user is logged in
             let window = UIWindow(windowScene: windowScene)
             window.rootViewController = LoginViewController { loginCredentials in
