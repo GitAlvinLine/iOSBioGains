@@ -16,6 +16,7 @@
 		DB2AE1832ABA8C12007F2907 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = DB2AE1822ABA8C12007F2907 /* RealmSwift */; };
 		DB2AE1862ABA8EFA007F2907 /* AuthenticatorClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2AE1852ABA8EFA007F2907 /* AuthenticatorClient.swift */; };
 		DB2AE1882ABA9050007F2907 /* RealmAuthenticatorClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2AE1872ABA9050007F2907 /* RealmAuthenticatorClient.swift */; };
+		DB2AE18D2ABA9BD1007F2907 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2AE18C2ABA9BD1007F2907 /* HomeViewController.swift */; };
 		DB4684202AA81C3A00905B87 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB46841F2AA81C3A00905B87 /* Assets.xcassets */; };
 		DB4684232AA81C3A00905B87 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB4684222AA81C3A00905B87 /* Preview Assets.xcassets */; };
 		DB5201BF2AAEB91E00979DAF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5201BE2AAEB91E00979DAF /* AppDelegate.swift */; };
@@ -44,6 +45,7 @@
 		DB2AE17D2AB944A8007F2907 /* CustomProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomProgressView.swift; sourceTree = "<group>"; };
 		DB2AE1852ABA8EFA007F2907 /* AuthenticatorClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticatorClient.swift; sourceTree = "<group>"; };
 		DB2AE1872ABA9050007F2907 /* RealmAuthenticatorClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmAuthenticatorClient.swift; sourceTree = "<group>"; };
+		DB2AE18C2ABA9BD1007F2907 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		DB4684182AA81C3A00905B87 /* iOSBioGains.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSBioGains.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB46841F2AA81C3A00905B87 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DB4684222AA81C3A00905B87 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -124,6 +126,14 @@
 			path = AuthenticationFeature;
 			sourceTree = "<group>";
 		};
+		DB2AE18B2ABA9BBD007F2907 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				DB2AE18C2ABA9BD1007F2907 /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 		DB46840F2AA81C3A00905B87 = {
 			isa = PBXGroup;
 			children = (
@@ -184,6 +194,7 @@
 		DB5201C52AB00BBD00979DAF /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				DB2AE18B2ABA9BBD007F2907 /* Home */,
 				DB2AE17C2AB94464007F2907 /* Login */,
 			);
 			path = UIKit;
@@ -318,6 +329,7 @@
 				DB1B25872AA97FD90056055B /* LoginView.swift in Sources */,
 				DBC777EE2AB3E63A00238A5F /* CustomTextField.swift in Sources */,
 				DB2AE1882ABA9050007F2907 /* RealmAuthenticatorClient.swift in Sources */,
+				DB2AE18D2ABA9BD1007F2907 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
