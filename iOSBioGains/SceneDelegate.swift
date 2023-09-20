@@ -5,6 +5,7 @@
 //  Created by Alvin Escobar on 9/10/23.
 //
 
+import RealmSwift
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
@@ -14,11 +15,24 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = scene as? UIWindowScene else { return }
         
-        let window = UIWindow(windowScene: windowScene)
-        window.rootViewController = LoginViewController { loginCredentials in
+        let app = App(id: "application-0-zyajh")
+        if let user = app.currentUser {
+            // user is logged in
+            let window = UIWindow(windowScene: windowScene)
+            window.rootViewController = LoginViewController { loginCredentials in
+                
+            }
+            self.window = window
+            window.makeKeyAndVisible()
             
+        } else {
+            let window = UIWindow(windowScene: windowScene)
+            window.rootViewController = LoginViewController { loginCredentials in
+                
+            }
+            self.window = window
+            window.makeKeyAndVisible()
         }
-        self.window = window
-        window.makeKeyAndVisible()
+    
     }
 }
