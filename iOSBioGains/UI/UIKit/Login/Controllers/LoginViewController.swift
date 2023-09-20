@@ -25,6 +25,12 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         self.loginButtonSetup()
     }
     
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.loginView.emailTextField.resignFirstResponder()
+        self.loginView.passwordTextField.resignFirstResponder()
+        return true
+    }
+    
     private func loginButtonSetup() {
         self.loginView.loginButton.addTarget(self, action: #selector(loginUser), for: .touchUpInside)
     }
