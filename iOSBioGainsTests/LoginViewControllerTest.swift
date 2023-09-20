@@ -9,35 +9,13 @@ import XCTest
 @testable import iOSBioGains
 
 final class LoginViewControllerTest: XCTestCase {
-
-    func test_viewDidLoad_RendersEmailTextFieldPlaceholder() {
-        XCTAssertEqual(makeSUT().emailTextField.placeholder, "Email")
-    }
     
-    func test_viewDidLoad_RendersPasswordTextFieldPlaceholder() {
-        XCTAssertEqual(makeSUT().passwordTextField.placeholder, "Password")
-    }
-    
-    func test_viewDidLoad_RendersEmptyTextFieldValues() {
-        XCTAssertEqual(makeSUT().emailTextField.text, "")
-        XCTAssertEqual(makeSUT().passwordTextField.text, "")
-    }
-    
-    func test_viewDidLoad_RendersLoginButtonText() {
-        XCTAssertEqual(makeSUT().loginButton.titleLabel?.text, "Login")
-    }
-    
-    func test_viewDidLoad_AddsAllSubviewsToView() {
-        XCTAssertEqual(makeSUT().view.subviews.count, 3)
-    }
-    
-    // MARK: - Helper
-    
-    private func makeSUT() -> LoginViewController {
-        let sut = LoginViewController(emailPlaceholder: "Email",
-                                      passwordPlaceholder: "Password",
-                                      loginButtonText: "Login")
+    func test_viewDidLoad_setLoginUIViewToSelfView() {
+        let sut = LoginViewController()
+        let loginView: UIView = LoginUIView()
         _ = sut.view
-        return sut
+        
+        XCTAssertEqual(sut.view.subviews.count, loginView.subviews.count)
     }
+    
 }
