@@ -23,6 +23,21 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         self.view = loginView
         self.loginView.emailTextField.delegate = self
         self.loginView.passwordTextField.delegate = self
+        self.loginButtonSetup()
+    }
+    
+    private func loginButtonSetup() {
+        self.loginView.loginButton.addTarget(self, action: #selector(loginUser), for: .touchUpInside)
+    }
+    
+    @objc func loginUser() {
+        if let email = self.loginView.emailTextField.text,
+            let password = self.loginView.passwordTextField.text {
+            let credentials = LoginCredentials(email: email, password: password)
+            tappedLogin?(credentials)
+        } else {
+            tappedLogin?(LoginCredentials(email: "", password: ""))
+        }
     }
     
 }
