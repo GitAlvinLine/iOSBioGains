@@ -15,6 +15,8 @@ class LoginUIView: UIView {
     let passwordTextField: CustomTextField = CustomTextField(placeholder: "Password", keyboardType: .default, secureTextEntry: true)
     let loginButton: CustomButton = CustomButton(title: "Login")
     let progressIndicator: CustomProgressView = CustomProgressView()
+    let alert: UIAlertController = UIAlertController(title: "", message: "", preferredStyle: .alert)
+    let alertAction: UIAlertAction = UIAlertAction(title: "OK", style: .default)
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -56,6 +58,9 @@ class LoginUIView: UIView {
             progressIndicator.heightAnchor.constraint(equalToConstant: 20),
             progressIndicator.widthAnchor.constraint(equalToConstant: 20)
         ])
+        
+        self.alert.addAction(self.alertAction)
+        
         
     }
         
