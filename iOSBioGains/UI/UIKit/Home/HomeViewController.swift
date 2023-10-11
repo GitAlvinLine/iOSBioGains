@@ -12,11 +12,18 @@ class HomeViewController: UIViewController {
     
     let homeLabel: UILabel = UILabel()
     let logoutButton: CustomButton = CustomButton(title: "Log Out")
-    var tappedLogOut: (() -> Void)? = nil
+    let loadingIndicator: UIActivityIndicatorView = UIActivityIndicatorView(style: .large)
+    let alert: UIAlertController = UIAlertController(title: nil, message: nil, preferredStyle: .alert)
+    let action: UIAlertAction = UIAlertAction(title: "OK", style: .default)
+    var user: User?
+    var authClient: AuthenticatorClient?
+    var logOutSuccess: (() -> Void)? = nil
     
-    convenience init(tappedLogOut: @escaping () -> Void) {
+    convenience init(user: User, authClient: AuthenticatorClient, logOutSuccess: @escaping () -> Void) {
         self.init()
-        self.tappedLogOut = tappedLogOut
+        self.user = user
+        self.authClient = authClient
+        self.logOutSuccess = logOutSuccess
     }
     
     override func viewDidLoad() {
@@ -47,6 +54,16 @@ class HomeViewController: UIViewController {
         ])
         
         logOutButtonSetup()
+        
+        NSLayoutConstraint.activate([
+            loadingIndicator.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
+            loadingIndicator.centerYAnchor.constraint(equalTo: self.view.centerYAnchor),
+        ])
+        
+        self.view.addSubview(loadingIndicator)
+        
+        self.alert.addAction(action)
+        
     }
     
     private func logOutButtonSetup() {
@@ -54,7 +71,31 @@ class HomeViewController: UIViewController {
     }
     
     @objc private func logOutUser() {
-        tappedLogOut?()
+        self.startAnimatingLoadingIndicator()
+        authClient?.logOut { [weak self] result in
+            switch result {
+            case .success:
+                self?.stopAnimatingLoadingIndicator()
+                self?.logOutSuccess?()
+            case .failure(let error):
+                self?.stopAnimatingLoadingIndicator()
+                self?.showAlertError(error)
+            }
+        }
+    }
+    
+    private func startAnimatingLoadingIndicator() {
+        self.loadingIndicator.startAnimating()
+    }
+    
+    private func stopAnimatingLoadingIndicator() {
+        self.loadingIndicator.stopAnimating()
+    }
+    
+    private func showAlertError(_ error: Error) {
+        self.alert.title = "Error"
+        self.alert.message = error.localizedDescription
+        self.present(self.alert, animated: true)
     }
 
 }

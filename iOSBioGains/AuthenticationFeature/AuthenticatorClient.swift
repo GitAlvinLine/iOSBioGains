@@ -13,10 +13,18 @@ struct User {
 }
 
 enum AuthenticatorClientResult {
-    case success(User)
-    case failure(Error)
+    enum Authenticate {
+        case success(User)
+        case failure(Error)
+    }
+    
+    enum LogOut {
+        case success
+        case failure(Error)
+    }
 }
 
 protocol AuthenticatorClient {
     func authenticate(with email: String, and password: String, completion: @escaping (Result<User, Error>) -> Void)
+    func logOut(completion: @escaping (AuthenticatorClientResult.LogOut) -> Void)
 }

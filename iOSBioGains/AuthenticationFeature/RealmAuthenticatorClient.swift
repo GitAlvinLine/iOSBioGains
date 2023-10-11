@@ -29,4 +29,14 @@ class RealmAuthenticatorClient: AuthenticatorClient {
             }
         }
     }
+    
+    func logOut(completion: @escaping (AuthenticatorClientResult.LogOut) -> Void)  {
+        app.currentUser?.logOut { error in
+            if let error = error {
+                completion(.failure(error))
+            } else {
+                completion(.success)
+            }
+        }
+    }
 }
