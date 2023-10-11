@@ -13,16 +13,16 @@ class RealmAuthenticatorClient: AuthenticatorClient {
     
     init() {}
     
-    func authenticate(with email: String, and password: String, completion: @escaping (Result<AppUser, Error>) -> Void) {
+    func authenticate(with email: String, and password: String, completion: @escaping (Result<User, Error>) -> Void) {
         app.login(credentials: Credentials.emailPassword(email: email, password: password)) { result in
             switch result {
             case .success(let user):
                 if let email = user.profile.email,
                    let name = user.profile.name {
-                    let appUser: AppUser = AppUser(email: email, name: name)
+                    let appUser: User = User(email: email, name: name)
                     completion(.success(appUser))
                 } else {
-                    completion(.success(AppUser(email: "", name: "")))
+                    completion(.success(User(email: "", name: "")))
                 }
             case .failure(let error):
                 completion(.failure(error))

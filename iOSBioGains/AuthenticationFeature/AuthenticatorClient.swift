@@ -7,16 +7,16 @@
 
 import Foundation
 
-struct AppUser {
+struct User {
     let email: String
     let name: String
 }
 
 enum AuthenticatorClientResult {
-    case success(AppUser)
+    case success(User)
     case failure(Error)
 }
 
 protocol AuthenticatorClient {
-    func authenticate(with email: String, and password: String, completion: @escaping (Result<AppUser, Error>) -> Void)
+    func authenticate(with email: String, and password: String, completion: @escaping (Result<User, Error>) -> Void)
 }

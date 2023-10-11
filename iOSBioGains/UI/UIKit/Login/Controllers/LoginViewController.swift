@@ -10,11 +10,13 @@ import UIKit
 class LoginViewController: UIViewController, UITextFieldDelegate {
     
     private let loginView: LoginUIView = LoginUIView()
-    var tappedLogin: ((LoginCredentials) -> Void)? = nil
+    var authClient: AuthenticatorClient?
+    var loginSuccess: ((User) -> Void)? = nil
     
-    convenience init(tappedLogin: @escaping (LoginCredentials) -> Void) {
+    convenience init(authClient: AuthenticatorClient, loginSuccess: @escaping (User) -> Void) {
         self.init()
-        self.tappedLogin = tappedLogin
+        self.authClient = authClient
+        self.loginSuccess = loginSuccess
     }
     
     override func viewDidLoad() {
@@ -36,13 +38,17 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     
     @objc func loginUser() {
-        if let email = self.loginView.emailTextField.text,
-            let password = self.loginView.passwordTextField.text {
-            let credentials = LoginCredentials(email: email, password: password)
-            tappedLogin?(credentials)
-        } else {
-            tappedLogin?(LoginCredentials(email: "", password: ""))
-        }
+        let email = self.loginView.emailTextField.text
+        let password = self.loginView.passwordTextField.text
+        let credentials = LoginCredentials(email: email ?? "", password: password ?? "")
+        authClient?.authenticate(with: credentials.email, and: credentials.password, completion: { [weak self] result in
+            switch result {
+            case .success(let user):
+                self?.loginSuccess?(user)
+            case .failure(let error):
+                print("error: \(error)")
+            }
+        })
     }
     
 }
