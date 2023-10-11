@@ -65,6 +65,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     private func showErrorAlert(_ error: Error) {
         self.loginView.alert.title = "Error"
         self.loginView.alert.message = error.localizedDescription
+        self.present(self.loginView.alert, animated: true)
     }
     
 }
