@@ -17,13 +17,13 @@ class HomeViewController: UIViewController {
     let action: UIAlertAction = UIAlertAction(title: "OK", style: .default)
     var user: User?
     var authClient: AuthenticatorClient?
-    var logOutSuccess: (() -> Void)? = nil
+    var router: UINavigationController?
     
-    convenience init(user: User, authClient: AuthenticatorClient, logOutSuccess: @escaping () -> Void) {
+    convenience init(user: User, authClient: AuthenticatorClient, router: UINavigationController) {
         self.init()
         self.user = user
         self.authClient = authClient
-        self.logOutSuccess = logOutSuccess
+        self.router = router
     }
     
     override func viewDidLoad() {
@@ -55,12 +55,15 @@ class HomeViewController: UIViewController {
         
         logOutButtonSetup()
         
+        loadingIndicator.translatesAutoresizingMaskIntoConstraints = false
+        self.view.addSubview(loadingIndicator)
+        
         NSLayoutConstraint.activate([
             loadingIndicator.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
             loadingIndicator.centerYAnchor.constraint(equalTo: self.view.centerYAnchor),
+            loadingIndicator.heightAnchor.constraint(equalToConstant: 20),
+            loadingIndicator.widthAnchor.constraint(equalToConstant: 20)
         ])
-        
-        self.view.addSubview(loadingIndicator)
         
         self.alert.addAction(action)
         
@@ -73,13 +76,20 @@ class HomeViewController: UIViewController {
     @objc private func logOutUser() {
         self.startAnimatingLoadingIndicator()
         authClient?.logOut { [weak self] result in
-            switch result {
-            case .success:
-                self?.stopAnimatingLoadingIndicator()
-                self?.logOutSuccess?()
-            case .failure(let error):
-                self?.stopAnimatingLoadingIndicator()
-                self?.showAlertError(error)
+            DispatchQueue.main.async {
+                switch result {
+                case .success:
+                    self?.stopAnimatingLoadingIndicator()
+                    
+                    guard let client = self?.authClient,
+                            let router = self?.router else { return }
+                    
+                    let loginVC = LoginViewController(authClient: client, router: router)
+                    router.setViewControllers([loginVC], animated: false)
+                case .failure(let error):
+                    self?.stopAnimatingLoadingIndicator()
+                    self?.showAlertError(error)
+                }
             }
         }
     }

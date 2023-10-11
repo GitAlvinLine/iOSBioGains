@@ -11,12 +11,12 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     private let loginView: LoginUIView = LoginUIView()
     var authClient: AuthenticatorClient?
-    var loginSuccess: ((User) -> Void)? = nil
+    var router: UINavigationController?
     
-    convenience init(authClient: AuthenticatorClient, loginSuccess: @escaping (User) -> Void) {
+    convenience init(authClient: AuthenticatorClient, router: UINavigationController) {
         self.init()
         self.authClient = authClient
-        self.loginSuccess = loginSuccess
+        self.router = router
     }
     
     override func viewDidLoad() {
@@ -43,13 +43,17 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         let password = self.loginView.passwordTextField.text
         let credentials = LoginCredentials(email: email ?? "", password: password ?? "")
         authClient?.authenticate(with: credentials.email, and: credentials.password, completion: { [weak self] result in
-            switch result {
-            case .success(let user):
-                self?.stopAnimatingLoadingIndicator()
-                self?.loginSuccess?(user)
-            case .failure(let error):
-                self?.stopAnimatingLoadingIndicator()
-                self?.showErrorAlert(error)
+            DispatchQueue.main.async {
+                switch result {
+                case .success(let user):
+                    self?.stopAnimatingLoadingIndicator()
+                    guard let client = self?.authClient, let router = self?.router else { return }
+                    let homeVC = HomeViewController(user: user, authClient: client, router: router)
+                    self?.router?.setViewControllers([homeVC], animated: true)
+                case .failure(let error):
+                    self?.stopAnimatingLoadingIndicator()
+                    self?.showErrorAlert(error)
+                }
             }
         })
     }
