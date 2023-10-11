@@ -39,4 +39,14 @@ class RealmAuthenticatorClient: AuthenticatorClient {
             }
         }
     }
+    
+    func signUp(with email: String, and password: String, completion: @escaping (AuthenticatorClientResult.SignUp) -> Void) {
+        app.emailPasswordAuth.registerUser(email: email, password: password) { error in
+            if let error = error {
+                completion(.failure(error))
+            } else {
+                completion(.success)
+            }
+        }
+    }
 }

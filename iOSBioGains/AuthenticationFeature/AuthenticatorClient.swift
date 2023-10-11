@@ -22,9 +22,15 @@ enum AuthenticatorClientResult {
         case success
         case failure(Error)
     }
+    
+    enum SignUp {
+        case success
+        case failure(Error)
+    }
 }
 
 protocol AuthenticatorClient {
     func authenticate(with email: String, and password: String, completion: @escaping (Result<User, Error>) -> Void)
     func logOut(completion: @escaping (AuthenticatorClientResult.LogOut) -> Void)
+    func signUp(with email: String, and password: String, completion: @escaping (AuthenticatorClientResult.SignUp) -> Void)
 }
