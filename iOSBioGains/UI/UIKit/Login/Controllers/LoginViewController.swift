@@ -38,17 +38,33 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     
     @objc func loginUser() {
+        self.startAnimatingLoadingIndicator()
         let email = self.loginView.emailTextField.text
         let password = self.loginView.passwordTextField.text
         let credentials = LoginCredentials(email: email ?? "", password: password ?? "")
         authClient?.authenticate(with: credentials.email, and: credentials.password, completion: { [weak self] result in
             switch result {
             case .success(let user):
+                self?.stopAnimatingLoadingIndicator()
                 self?.loginSuccess?(user)
             case .failure(let error):
-                print("error: \(error)")
+                self?.stopAnimatingLoadingIndicator()
+                self?.showErrorAlert(error)
             }
         })
+    }
+    
+    private func startAnimatingLoadingIndicator() {
+        self.loginView.progressIndicator.startAnimating()
+    }
+    
+    private func stopAnimatingLoadingIndicator() {
+        self.loginView.progressIndicator.stopAnimating()
+    }
+    
+    private func showErrorAlert(_ error: Error) {
+        self.loginView.alert.title = "Error"
+        self.loginView.alert.message = error.localizedDescription
     }
     
 }
