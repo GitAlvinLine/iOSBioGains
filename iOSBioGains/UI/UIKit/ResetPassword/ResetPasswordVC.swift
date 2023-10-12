@@ -27,6 +27,8 @@ class ResetPasswordVC: UIViewController, UITextFieldDelegate {
         
         self.navigationController?.navigationBar.isHidden = false
         
+        self.view.backgroundColor = UIScreen.main.traitCollection.userInterfaceStyle == .light ? .white : .black
+        
         email.delegate = self
         
         email.translatesAutoresizingMaskIntoConstraints = false
@@ -61,6 +63,10 @@ class ResetPasswordVC: UIViewController, UITextFieldDelegate {
         
         alertVC.addAction(action)
         
+    }
+    
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        self.view.backgroundColor = previousTraitCollection?.userInterfaceStyle == .light ? .black : .white
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
