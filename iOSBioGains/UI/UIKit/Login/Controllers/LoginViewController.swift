@@ -60,7 +60,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     
     private func signUpButtonSetup() {
-        self.loginView.goToSignUpScreen.addTarget(self, action: #selector(showSignUpScreen), for: .touchUpInside)
+        self.loginView.signUpButton.addTarget(self, action: #selector(showSignUpScreen), for: .touchUpInside)
     }
     
     @objc func showSignUpScreen() {

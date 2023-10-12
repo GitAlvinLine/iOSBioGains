@@ -14,7 +14,7 @@ class LoginUIView: UIView {
                                                           keyboardType: .emailAddress)
     let passwordTextField: CustomTextField = CustomTextField(placeholder: "Password", keyboardType: .default, secureTextEntry: true)
     let loginButton: CustomButton = CustomButton(title: "Login")
-    let goToSignUpScreen: UIButton = UIButton(configuration: .borderless())
+    let signUpButton: CustomButton = CustomButton(title: "Sign Up")
     let progressIndicator: CustomProgressView = CustomProgressView()
     let alert: UIAlertController = UIAlertController(title: "", message: "", preferredStyle: .alert)
     let alertAction: UIAlertAction = UIAlertAction(title: "OK", style: .default)
@@ -42,15 +42,13 @@ class LoginUIView: UIView {
             passwordTextField.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20)
         ])
         
-        goToSignUpScreen.setTitle("Sign Up?", for: .normal)
-        goToSignUpScreen.setTitleColor(.link, for: .normal)
-        goToSignUpScreen.translatesAutoresizingMaskIntoConstraints = false
-        self.addSubview(goToSignUpScreen)
+        self.addSubview(signUpButton)
         
         NSLayoutConstraint.activate([
-            goToSignUpScreen.topAnchor.constraint(equalTo: self.passwordTextField.bottomAnchor, constant: 10),
-            goToSignUpScreen.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20),
-            goToSignUpScreen.heightAnchor.constraint(equalToConstant: 30)
+            signUpButton.heightAnchor.constraint(equalToConstant: 50),
+            signUpButton.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
+            signUpButton.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20),
+            signUpButton.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor, constant: -100)
         ])
         
         self.addSubview(loginButton)
@@ -61,6 +59,7 @@ class LoginUIView: UIView {
             loginButton.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20),
             loginButton.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor, constant: -20)
         ])
+        
         
         self.addSubview(progressIndicator)
         
