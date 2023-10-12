@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		DB006E7B2AD76853001439E2 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB006E7A2AD76853001439E2 /* SignUpVC.swift */; };
+		DB006E7E2AD799CE001439E2 /* ResetPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB006E7D2AD799CE001439E2 /* ResetPasswordVC.swift */; };
 		DB1B25872AA97FD90056055B /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1B25862AA97FD90056055B /* LoginView.swift */; };
 		DB2AE1722AB75F29007F2907 /* LoginUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2AE1712AB75F29007F2907 /* LoginUIView.swift */; };
 		DB2AE1762AB80FB7007F2907 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2AE1752AB80FB7007F2907 /* CustomButton.swift */; };
@@ -40,6 +41,7 @@
 
 /* Begin PBXFileReference section */
 		DB006E7A2AD76853001439E2 /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
+		DB006E7D2AD799CE001439E2 /* ResetPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordVC.swift; sourceTree = "<group>"; };
 		DB1B25862AA97FD90056055B /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		DB2AE1712AB75F29007F2907 /* LoginUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUIView.swift; sourceTree = "<group>"; };
 		DB2AE1752AB80FB7007F2907 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
@@ -88,6 +90,14 @@
 				DB006E7A2AD76853001439E2 /* SignUpVC.swift */,
 			);
 			path = SignUp;
+			sourceTree = "<group>";
+		};
+		DB006E7C2AD799A3001439E2 /* ResetPassword */ = {
+			isa = PBXGroup;
+			children = (
+				DB006E7D2AD799CE001439E2 /* ResetPasswordVC.swift */,
+			);
+			path = ResetPassword;
 			sourceTree = "<group>";
 		};
 		DB2AE1772AB91CD3007F2907 /* Model */ = {
@@ -207,6 +217,7 @@
 				DB2AE18B2ABA9BBD007F2907 /* Home */,
 				DB2AE17C2AB94464007F2907 /* Login */,
 				DB006E792AD76833001439E2 /* SignUp */,
+				DB006E7C2AD799A3001439E2 /* ResetPassword */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -340,6 +351,7 @@
 				DB1B25872AA97FD90056055B /* LoginView.swift in Sources */,
 				DBC777EE2AB3E63A00238A5F /* CustomTextField.swift in Sources */,
 				DB006E7B2AD76853001439E2 /* SignUpVC.swift in Sources */,
+				DB006E7E2AD799CE001439E2 /* ResetPasswordVC.swift in Sources */,
 				DB2AE1882ABA9050007F2907 /* RealmAuthenticatorClient.swift in Sources */,
 				DB2AE18D2ABA9BD1007F2907 /* HomeViewController.swift in Sources */,
 			);

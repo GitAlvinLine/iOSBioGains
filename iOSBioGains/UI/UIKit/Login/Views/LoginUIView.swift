@@ -43,7 +43,7 @@ class LoginUIView: UIView {
         ])
         
         goToSignUpScreen.setTitle("Sign Up?", for: .normal)
-        goToSignUpScreen.setTitleColor(.blue, for: .normal)
+        goToSignUpScreen.setTitleColor(.link, for: .normal)
         goToSignUpScreen.translatesAutoresizingMaskIntoConstraints = false
         self.addSubview(goToSignUpScreen)
         

@@ -17,13 +17,13 @@ class SignUpVC: UIViewController, UITextFieldDelegate {
     let alertVC: UIAlertController = UIAlertController(title: nil, message: nil, preferredStyle: .alert)
     let action: UIAlertAction = UIAlertAction(title: "OK", style: .default)
     
-    private var authClient: AuthenticatorClient?
-    private var router: UINavigationController?
+    private let resetPasswordLink: UIButton = UIButton(configuration: .borderless())
     
-    convenience init(authClient: AuthenticatorClient, router: UINavigationController) {
+    private var authClient: AuthenticatorClient?
+    
+    convenience init(authClient: AuthenticatorClient) {
         self.init()
         self.authClient = authClient
-        self.router = router
     }
     
     override func viewDidLoad() {
@@ -32,7 +32,7 @@ class SignUpVC: UIViewController, UITextFieldDelegate {
         self.email.delegate = self
         self.password.delegate = self
         
-        router?.navigationBar.isHidden = false
+        self.navigationController?.navigationBar.isHidden = false
         
         self.view.backgroundColor = UIScreen.main.traitCollection.userInterfaceStyle == .light ? .white : .black
         
@@ -52,6 +52,19 @@ class SignUpVC: UIViewController, UITextFieldDelegate {
             password.centerYAnchor.constraint(equalTo: email.centerYAnchor, constant: 60),
             password.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 20),
             password.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -20)
+        ])
+        
+        resetPasswordLink.setTitle("Forgot Password", for: .normal)
+        resetPasswordLink.setTitleColor(.link, for: .normal)
+        resetPasswordLink.translatesAutoresizingMaskIntoConstraints = false
+        self.view.addSubview(resetPasswordLink)
+        
+        setUpResetPasswordLink()
+        
+        NSLayoutConstraint.activate([
+            resetPasswordLink.topAnchor.constraint(equalTo: self.password.bottomAnchor, constant: 20),
+            resetPasswordLink.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -20),
+            resetPasswordLink.heightAnchor.constraint(equalToConstant: 30)
         ])
         
         self.view.addSubview(signUpButton)
@@ -88,6 +101,16 @@ class SignUpVC: UIViewController, UITextFieldDelegate {
         return true
     }
     
+    private func setUpResetPasswordLink() {
+        resetPasswordLink.addTarget(self, action: #selector(goToResetPasswordVC), for: .touchUpInside)
+    }
+    
+    @objc func goToResetPasswordVC() {
+        guard let client = authClient else { return }
+        let resetPasswordVC = ResetPasswordVC(authClient: client)
+        self.navigationController?.pushViewController(resetPasswordVC, animated: true)
+    }
+    
     private func setUpSignUpButton() {
         signUpButton.addTarget(self, action: #selector(tappedSignUp), for: .touchUpInside)
     }
@@ -114,7 +137,7 @@ class SignUpVC: UIViewController, UITextFieldDelegate {
             DispatchQueue.main.async {
                 switch result {
                 case .success(let user):
-                    guard let client = self?.authClient, let router = self?.router else { return }
+                    guard let client = self?.authClient, let router = self?.navigationController else { return }
                     let homeVC = HomeViewController(user: user, authClient: client, router: router)
                     router.setViewControllers([homeVC], animated: true)
                 case .failure(let error):

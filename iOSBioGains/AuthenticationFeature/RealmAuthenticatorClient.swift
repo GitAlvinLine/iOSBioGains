@@ -49,4 +49,14 @@ class RealmAuthenticatorClient: AuthenticatorClient {
             }
         }
     }
+    
+    func resetPassword(with email: String, completion: @escaping (AuthenticatorClientResult.Reset) -> Void) {
+        app.emailPasswordAuth.sendResetPasswordEmail(email) { error in
+            if let error = error {
+                completion(.failure(error))
+            } else {
+                completion(.success)
+            }
+        }
+    }
 }

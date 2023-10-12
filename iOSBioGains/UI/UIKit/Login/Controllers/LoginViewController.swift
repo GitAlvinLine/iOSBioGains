@@ -64,8 +64,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     
     @objc func showSignUpScreen() {
-        guard let client = authClient, let router = router else { return }
-        let signUpVC = SignUpVC(authClient: client, router: router)
+        guard let client = authClient, let router = self.navigationController else { return }
+        let signUpVC = SignUpVC(authClient: client)
         router.pushViewController(signUpVC, animated: true)
     }
     
