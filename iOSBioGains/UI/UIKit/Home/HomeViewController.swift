@@ -10,7 +10,7 @@ import UIKit
 
 class HomeViewController: UIViewController {
     
-    let homeLabel: UILabel = UILabel()
+    let userEmail: UILabel = UILabel()
     let logoutButton: CustomButton = CustomButton(title: "Log Out")
     let loadingIndicator: UIActivityIndicatorView = UIActivityIndicatorView(style: .large)
     let alert: UIAlertController = UIAlertController(title: nil, message: nil, preferredStyle: .alert)
@@ -29,18 +29,18 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .white
-        homeLabel.text = "Home"
-        homeLabel.textColor = .black
-        homeLabel.font = .preferredFont(forTextStyle: .largeTitle)
-        homeLabel.textAlignment = .center
-        homeLabel.translatesAutoresizingMaskIntoConstraints = false
-        self.view.addSubview(homeLabel)
+        userEmail.text = user?.email ?? ""
+        userEmail.textColor = .black
+        userEmail.font = .preferredFont(forTextStyle: .largeTitle)
+        userEmail.textAlignment = .center
+        userEmail.translatesAutoresizingMaskIntoConstraints = false
+        self.view.addSubview(userEmail)
         
         NSLayoutConstraint.activate([
-            homeLabel.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
-            homeLabel.centerYAnchor.constraint(equalTo: self.view.centerYAnchor),
-            homeLabel.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 20),
-            homeLabel.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -20),
+            userEmail.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
+            userEmail.centerYAnchor.constraint(equalTo: self.view.centerYAnchor),
+            userEmail.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 20),
+            userEmail.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -20),
         ])
         
         self.view.addSubview(logoutButton)
