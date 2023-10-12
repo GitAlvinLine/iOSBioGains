@@ -54,9 +54,10 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                     
                     let user = User(email: user.email, name: user.name)
                     let homeVC = HomeViewController(user: user, authClient: client, router: router)
+                    let trainerVC = TrainerChatVC()
                     
                     let profileNavigation = UINavigationController(rootViewController: homeVC)
-                    let personalTrainerNavigation = UINavigationController(rootViewController: UIViewController())
+                    let personalTrainerNavigation = UINavigationController(rootViewController: trainerVC)
                     
                     profileNavigation.tabBarItem = UITabBarItem(title: "Profile", image: nil, tag: 1)
                     personalTrainerNavigation.tabBarItem = UITabBarItem(title: "Trainer", image: nil, tag: 0)

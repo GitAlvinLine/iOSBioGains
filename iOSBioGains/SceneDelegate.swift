@@ -27,9 +27,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             
             let user = User(email: user.profile.email ?? "", name: user.profile.name ?? "")
             let homeVC = HomeViewController(user: user, authClient: realmAuthClient, router: router)
+            let trainerChatVC = TrainerChatVC()
             
             let profileNavigation = UINavigationController(rootViewController: homeVC)
-            let personalTrainerNavigation = UINavigationController(rootViewController: UIViewController())
+            let personalTrainerNavigation = UINavigationController(rootViewController: trainerChatVC)
             
             profileNavigation.tabBarItem = UITabBarItem(title: "Profile", image: nil, tag: 1)
             personalTrainerNavigation.tabBarItem = UITabBarItem(title: "Trainer", image: nil, tag: 0)
