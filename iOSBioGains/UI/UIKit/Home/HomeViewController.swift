@@ -123,7 +123,7 @@ class HomeViewController: UIViewController {
 struct HomeVC_Preview: PreviewProvider {
     
     private final class MockAuthClient: AuthenticatorClient {
-        func resetPassword(with email: String, completion: @escaping (AuthenticatorClientResult.Reset) -> Void) {
+        func resetPassword(with email: String, and newPassword: String, completion: @escaping (AuthenticatorClientResult.Reset) -> Void) {
             
         }
         

@@ -10,7 +10,8 @@ import UIKit
 class ResetPasswordVC: UIViewController, UITextFieldDelegate {
     
     private let email: CustomTextField = CustomTextField(placeholder: "Email", keyboardType: .emailAddress)
-    private let resetPasswordButton: CustomButton = CustomButton(title: "Send Reset Password Link")
+    private let newPassword: CustomTextField = CustomTextField(placeholder: "New Password", keyboardType: .default)
+    private let resetPasswordButton: CustomButton = CustomButton(title: "Reset Password")
     private let progressIndicator: UIActivityIndicatorView = UIActivityIndicatorView(style: .large)
     private let alertVC: UIAlertController = UIAlertController(title: nil, message: nil, preferredStyle: .alert)
     private let action: UIAlertAction = UIAlertAction(title: "OK", style: .default)
@@ -30,16 +31,27 @@ class ResetPasswordVC: UIViewController, UITextFieldDelegate {
         self.view.backgroundColor = UIScreen.main.traitCollection.userInterfaceStyle == .light ? .white : .black
         
         email.delegate = self
+        newPassword.delegate = self
         
         email.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(email)
         
         NSLayoutConstraint.activate([
             email.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
-            email.centerYAnchor.constraint(equalTo: self.view.centerYAnchor, constant: -20),
+            email.centerYAnchor.constraint(equalTo: self.view.centerYAnchor, constant: -80),
             email.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 20),
             email.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -20)
             
+        ])
+        
+        newPassword.translatesAutoresizingMaskIntoConstraints = false
+        self.view.addSubview(newPassword)
+        
+        NSLayoutConstraint.activate([
+            newPassword.centerXAnchor.constraint(equalTo: email.centerXAnchor, constant: 0),
+            newPassword.centerYAnchor.constraint(equalTo: email.centerYAnchor, constant: 60),
+            newPassword.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 20),
+            newPassword.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -20)
         ])
         
         self.view.addSubview(resetPasswordButton)
@@ -71,6 +83,7 @@ class ResetPasswordVC: UIViewController, UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         email.resignFirstResponder()
+        newPassword.resignFirstResponder()
         return true
     }
     
@@ -80,8 +93,8 @@ class ResetPasswordVC: UIViewController, UITextFieldDelegate {
     
     @objc func tappedSendPasswordResetLink() {
         startAnimatingProgressIndicator()
-        guard let email = email.text else { return }
-        authClient?.resetPassword(with: email) { [weak self] result in
+        guard let email = email.text, let newPassword = newPassword.text else { return }
+        authClient?.resetPassword(with: email, and: newPassword) { [weak self] result in
             DispatchQueue.main.async {
                 switch result {
                 case .success:
@@ -105,7 +118,7 @@ class ResetPasswordVC: UIViewController, UITextFieldDelegate {
     
     private func showPasswordResetLinkSuccessAlert() {
         self.alertVC.title = "Success!"
-        self.alertVC.message = "We have sent a password reset link to your email."
+        self.alertVC.message = "You have reset your password. You can login now with new password."
         self.present(alertVC, animated: true)
     }
     

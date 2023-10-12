@@ -43,6 +43,6 @@ protocol AuthenticatorClient {
     func authenticate(with email: String, and password: String, completion: @escaping (Result<User, Error>) -> Void)
     func logOut(completion: @escaping (AuthenticatorClientResult.LogOut) -> Void)
     func signUp(with email: String, and password: String, completion: @escaping (AuthenticatorClientResult.SignUp) -> Void)
-    func resetPassword(with email: String, completion: @escaping (AuthenticatorClientResult.Reset) -> Void)
+    func resetPassword(with email: String, and newPassword: String, completion: @escaping (AuthenticatorClientResult.Reset) -> Void)
     func deleteUser(completion: @escaping (AuthenticatorClientResult.DeleteUser) -> Void)
 }
