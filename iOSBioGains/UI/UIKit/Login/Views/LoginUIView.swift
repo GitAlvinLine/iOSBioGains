@@ -14,6 +14,7 @@ class LoginUIView: UIView {
                                                           keyboardType: .emailAddress)
     let passwordTextField: CustomTextField = CustomTextField(placeholder: "Password", keyboardType: .default, secureTextEntry: true)
     let loginButton: CustomButton = CustomButton(title: "Login")
+    let goToSignUpScreen: UIButton = UIButton(configuration: .borderless())
     let progressIndicator: CustomProgressView = CustomProgressView()
     let alert: UIAlertController = UIAlertController(title: "", message: "", preferredStyle: .alert)
     let alertAction: UIAlertAction = UIAlertAction(title: "OK", style: .default)
@@ -39,6 +40,17 @@ class LoginUIView: UIView {
             passwordTextField.centerYAnchor.constraint(equalTo: emailTextField.centerYAnchor, constant: 60),
             passwordTextField.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
             passwordTextField.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20)
+        ])
+        
+        goToSignUpScreen.setTitle("Sign Up?", for: .normal)
+        goToSignUpScreen.setTitleColor(.blue, for: .normal)
+        goToSignUpScreen.translatesAutoresizingMaskIntoConstraints = false
+        self.addSubview(goToSignUpScreen)
+        
+        NSLayoutConstraint.activate([
+            goToSignUpScreen.topAnchor.constraint(equalTo: self.passwordTextField.bottomAnchor, constant: 10),
+            goToSignUpScreen.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20),
+            goToSignUpScreen.heightAnchor.constraint(equalToConstant: 30)
         ])
         
         self.addSubview(loginButton)

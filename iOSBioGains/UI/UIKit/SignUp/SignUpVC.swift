@@ -8,7 +8,7 @@
 import SwiftUI
 import UIKit
 
-class SignUpVC: UIViewController {
+class SignUpVC: UIViewController, UITextFieldDelegate {
 
     let email: CustomTextField = CustomTextField(placeholder: "Email", keyboardType: .emailAddress)
     let password: CustomTextField = CustomTextField(placeholder: "Password", keyboardType: .default)
@@ -28,6 +28,9 @@ class SignUpVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.email.delegate = self
+        self.password.delegate = self
         
         router?.navigationBar.isHidden = false
         
@@ -77,6 +80,12 @@ class SignUpVC: UIViewController {
     
     override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
         self.view.backgroundColor = previousTraitCollection?.userInterfaceStyle == .light ? .black : .white
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.email.resignFirstResponder()
+        self.password.resignFirstResponder()
+        return true
     }
     
     private func setUpSignUpButton() {

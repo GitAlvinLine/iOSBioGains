@@ -25,6 +25,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         self.loginView.emailTextField.delegate = self
         self.loginView.passwordTextField.delegate = self
         self.loginButtonSetup()
+        self.signUpButtonSetup()
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -56,6 +57,16 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                 }
             }
         })
+    }
+    
+    private func signUpButtonSetup() {
+        self.loginView.goToSignUpScreen.addTarget(self, action: #selector(showSignUpScreen), for: .touchUpInside)
+    }
+    
+    @objc func showSignUpScreen() {
+        guard let client = authClient, let router = router else { return }
+        let signUpVC = SignUpVC(authClient: client, router: router)
+        router.pushViewController(signUpVC, animated: true)
     }
     
     private func startAnimatingLoadingIndicator() {
