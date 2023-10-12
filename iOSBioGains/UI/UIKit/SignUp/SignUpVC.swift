@@ -17,8 +17,6 @@ class SignUpVC: UIViewController, UITextFieldDelegate {
     let alertVC: UIAlertController = UIAlertController(title: nil, message: nil, preferredStyle: .alert)
     let action: UIAlertAction = UIAlertAction(title: "OK", style: .default)
     
-    private let resetPasswordLink: UIButton = UIButton(configuration: .borderless())
-    
     private var authClient: AuthenticatorClient?
     
     convenience init(authClient: AuthenticatorClient) {
@@ -54,19 +52,6 @@ class SignUpVC: UIViewController, UITextFieldDelegate {
             password.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -20)
         ])
         
-        resetPasswordLink.setTitle("Forgot Password", for: .normal)
-        resetPasswordLink.setTitleColor(.link, for: .normal)
-        resetPasswordLink.translatesAutoresizingMaskIntoConstraints = false
-        self.view.addSubview(resetPasswordLink)
-        
-        setUpResetPasswordLink()
-        
-        NSLayoutConstraint.activate([
-            resetPasswordLink.topAnchor.constraint(equalTo: self.password.bottomAnchor, constant: 20),
-            resetPasswordLink.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -20),
-            resetPasswordLink.heightAnchor.constraint(equalToConstant: 30)
-        ])
-        
         self.view.addSubview(signUpButton)
         
         NSLayoutConstraint.activate([
@@ -99,16 +84,6 @@ class SignUpVC: UIViewController, UITextFieldDelegate {
         self.email.resignFirstResponder()
         self.password.resignFirstResponder()
         return true
-    }
-    
-    private func setUpResetPasswordLink() {
-        resetPasswordLink.addTarget(self, action: #selector(goToResetPasswordVC), for: .touchUpInside)
-    }
-    
-    @objc func goToResetPasswordVC() {
-        guard let client = authClient else { return }
-        let resetPasswordVC = ResetPasswordVC(authClient: client)
-        self.navigationController?.pushViewController(resetPasswordVC, animated: true)
     }
     
     private func setUpSignUpButton() {

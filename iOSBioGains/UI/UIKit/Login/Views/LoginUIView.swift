@@ -15,6 +15,7 @@ class LoginUIView: UIView {
     let passwordTextField: CustomTextField = CustomTextField(placeholder: "Password", keyboardType: .default, secureTextEntry: true)
     let loginButton: CustomButton = CustomButton(title: "Login")
     let signUpButton: CustomButton = CustomButton(title: "Sign Up")
+    let forgotPasswordButton: UIButton = UIButton(configuration: .borderless())
     let progressIndicator: CustomProgressView = CustomProgressView()
     let alert: UIAlertController = UIAlertController(title: "", message: "", preferredStyle: .alert)
     let alertAction: UIAlertAction = UIAlertAction(title: "OK", style: .default)
@@ -40,6 +41,17 @@ class LoginUIView: UIView {
             passwordTextField.centerYAnchor.constraint(equalTo: emailTextField.centerYAnchor, constant: 60),
             passwordTextField.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
             passwordTextField.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20)
+        ])
+        
+        forgotPasswordButton.setTitle("Forgot Password?", for: .normal)
+        forgotPasswordButton.setTitleColor(.link, for: .normal)
+        forgotPasswordButton.translatesAutoresizingMaskIntoConstraints = false
+        self.addSubview(forgotPasswordButton)
+        
+        NSLayoutConstraint.activate([
+            forgotPasswordButton.topAnchor.constraint(equalTo: passwordTextField.bottomAnchor, constant: 20),
+            forgotPasswordButton.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20),
+            forgotPasswordButton.heightAnchor.constraint(equalToConstant: 20)
         ])
         
         self.addSubview(signUpButton)

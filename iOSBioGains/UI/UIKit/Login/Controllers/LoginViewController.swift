@@ -24,6 +24,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         self.view = loginView
         self.loginView.emailTextField.delegate = self
         self.loginView.passwordTextField.delegate = self
+        self.forgotPasswordButtonSetup()
         self.loginButtonSetup()
         self.signUpButtonSetup()
     }
@@ -57,6 +58,16 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                 }
             }
         })
+    }
+    
+    private func forgotPasswordButtonSetup() {
+        self.loginView.forgotPasswordButton.addTarget(self, action: #selector(showForgotPasswordScreen), for: .touchUpInside)
+    }
+    
+    @objc func showForgotPasswordScreen() {
+        guard let client = authClient, let router = self.navigationController else { return }
+        let resetPasswordVC = ResetPasswordVC(authClient: client)
+        router.pushViewController(resetPasswordVC, animated: true)
     }
     
     private func signUpButtonSetup() {
