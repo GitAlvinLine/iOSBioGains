@@ -28,9 +28,10 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = .white
+        self.view.backgroundColor = UIScreen.main.traitCollection.userInterfaceStyle == .light ? .white : .black
+        
         userEmail.text = user?.email ?? ""
-        userEmail.textColor = .black
+        userEmail.textColor = UIScreen.main.traitCollection.userInterfaceStyle == .light ? .black : .white
         userEmail.font = .preferredFont(forTextStyle: .largeTitle)
         userEmail.textAlignment = .center
         userEmail.translatesAutoresizingMaskIntoConstraints = false
@@ -67,6 +68,11 @@ class HomeViewController: UIViewController {
         
         self.alert.addAction(action)
         
+    }
+    
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        self.view.backgroundColor = previousTraitCollection?.userInterfaceStyle == .light ? .black : .white
+        self.userEmail.textColor = previousTraitCollection?.userInterfaceStyle == .light ? .white : .black
     }
     
     private func logOutButtonSetup() {
