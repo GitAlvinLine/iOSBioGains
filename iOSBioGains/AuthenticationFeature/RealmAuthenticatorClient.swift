@@ -59,4 +59,19 @@ class RealmAuthenticatorClient: AuthenticatorClient {
             }
         }
     }
+    
+    func deleteUser(completion: @escaping (AuthenticatorClientResult.DeleteUser) -> Void) {
+        if let user = app.currentUser {
+            user.delete { error in
+                if let error = error {
+                    completion(.failure(error))
+                } else {
+                    completion(.success)
+                }
+            }
+        } else {
+            let error = NSError(domain: "", code: 1, userInfo: [ NSLocalizedDescriptionKey: "No user is signed in. Can not delete any account."])
+            completion(.failure(error))
+        }
+    }
 }

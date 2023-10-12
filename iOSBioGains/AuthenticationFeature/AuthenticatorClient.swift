@@ -32,6 +32,11 @@ enum AuthenticatorClientResult {
         case success
         case failure(Error)
     }
+    
+    enum DeleteUser {
+        case success
+        case failure(Error)
+    }
 }
 
 protocol AuthenticatorClient {
@@ -39,4 +44,5 @@ protocol AuthenticatorClient {
     func logOut(completion: @escaping (AuthenticatorClientResult.LogOut) -> Void)
     func signUp(with email: String, and password: String, completion: @escaping (AuthenticatorClientResult.SignUp) -> Void)
     func resetPassword(with email: String, completion: @escaping (AuthenticatorClientResult.Reset) -> Void)
+    func deleteUser(completion: @escaping (AuthenticatorClientResult.DeleteUser) -> Void)
 }
