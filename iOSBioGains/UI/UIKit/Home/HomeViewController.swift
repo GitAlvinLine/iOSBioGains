@@ -95,7 +95,9 @@ class HomeViewController: UIViewController {
                             let router = self?.router else { return }
                     
                     let loginVC = LoginViewController(authClient: client, router: router)
-                    router.setViewControllers([loginVC], animated: false)
+                    let navigationController = UINavigationController(rootViewController: loginVC)
+                    navigationController.modalPresentationStyle = .fullScreen
+                    self?.present(navigationController, animated: false)
                 case .failure(let error):
                     self?.stopAnimatingLoadingIndicator()
                     self?.showAlertError(error)

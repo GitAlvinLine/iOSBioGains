@@ -113,8 +113,23 @@ class SignUpVC: UIViewController, UITextFieldDelegate {
                 switch result {
                 case .success(let user):
                     guard let client = self?.authClient, let router = self?.navigationController else { return }
+                    let tabbar = UITabBarController()
+                    
+                    let user = User(email: user.email, name: user.name)
                     let homeVC = HomeViewController(user: user, authClient: client, router: router)
-                    router.setViewControllers([homeVC], animated: true)
+                    
+                    let profileNavigation = UINavigationController(rootViewController: homeVC)
+                    let personalTrainerNavigation = UINavigationController(rootViewController: UIViewController())
+                    
+                    profileNavigation.tabBarItem = UITabBarItem(title: "Profile", image: nil, tag: 1)
+                    personalTrainerNavigation.tabBarItem = UITabBarItem(title: "Trainer", image: nil, tag: 0)
+                    
+                    tabbar.viewControllers = [personalTrainerNavigation, profileNavigation]
+                    tabbar.selectedIndex = 1
+                    
+                    tabbar.modalPresentationStyle = .fullScreen
+                    
+                    self?.present(tabbar, animated: false)
                 case .failure(let error):
                     self?.stopAnimatingProgressIndicator()
                     self?.showAlertError(error)

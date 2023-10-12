@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		DB006E7B2AD76853001439E2 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB006E7A2AD76853001439E2 /* SignUpVC.swift */; };
 		DB006E7E2AD799CE001439E2 /* ResetPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB006E7D2AD799CE001439E2 /* ResetPasswordVC.swift */; };
+		DB006E812AD8A9F7001439E2 /* RoutingMananger.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB006E802AD8A9F7001439E2 /* RoutingMananger.swift */; };
 		DB1B25872AA97FD90056055B /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1B25862AA97FD90056055B /* LoginView.swift */; };
 		DB2AE1722AB75F29007F2907 /* LoginUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2AE1712AB75F29007F2907 /* LoginUIView.swift */; };
 		DB2AE1762AB80FB7007F2907 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2AE1752AB80FB7007F2907 /* CustomButton.swift */; };
@@ -42,6 +43,7 @@
 /* Begin PBXFileReference section */
 		DB006E7A2AD76853001439E2 /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
 		DB006E7D2AD799CE001439E2 /* ResetPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordVC.swift; sourceTree = "<group>"; };
+		DB006E802AD8A9F7001439E2 /* RoutingMananger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutingMananger.swift; sourceTree = "<group>"; };
 		DB1B25862AA97FD90056055B /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		DB2AE1712AB75F29007F2907 /* LoginUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUIView.swift; sourceTree = "<group>"; };
 		DB2AE1752AB80FB7007F2907 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
@@ -98,6 +100,14 @@
 				DB006E7D2AD799CE001439E2 /* ResetPasswordVC.swift */,
 			);
 			path = ResetPassword;
+			sourceTree = "<group>";
+		};
+		DB006E7F2AD8A9DC001439E2 /* Routing */ = {
+			isa = PBXGroup;
+			children = (
+				DB006E802AD8A9F7001439E2 /* RoutingMananger.swift */,
+			);
+			path = Routing;
 			sourceTree = "<group>";
 		};
 		DB2AE1772AB91CD3007F2907 /* Model */ = {
@@ -175,6 +185,7 @@
 		DB46841A2AA81C3A00905B87 /* iOSBioGains */ = {
 			isa = PBXGroup;
 			children = (
+				DB006E7F2AD8A9DC001439E2 /* Routing */,
 				DB2AE1842ABA8E4A007F2907 /* AuthenticationFeature */,
 				DB5201BE2AAEB91E00979DAF /* AppDelegate.swift */,
 				DB5201C02AAEBA2900979DAF /* SceneDelegate.swift */,
@@ -349,6 +360,7 @@
 				DB2AE1862ABA8EFA007F2907 /* AuthenticatorClient.swift in Sources */,
 				DB2AE1762AB80FB7007F2907 /* CustomButton.swift in Sources */,
 				DB1B25872AA97FD90056055B /* LoginView.swift in Sources */,
+				DB006E812AD8A9F7001439E2 /* RoutingMananger.swift in Sources */,
 				DBC777EE2AB3E63A00238A5F /* CustomTextField.swift in Sources */,
 				DB006E7B2AD76853001439E2 /* SignUpVC.swift in Sources */,
 				DB006E7E2AD799CE001439E2 /* ResetPasswordVC.swift in Sources */,

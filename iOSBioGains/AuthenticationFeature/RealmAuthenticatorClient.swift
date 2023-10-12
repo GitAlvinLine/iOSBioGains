@@ -11,6 +11,14 @@ import Foundation
 class RealmAuthenticatorClient: AuthenticatorClient {
     private let app = App(id: "application-0-zyajh")
     
+    var user: User? {
+        if let profile = app.currentUser?.profile {
+            return User(email: profile.email ?? "", name: profile.name ?? "")
+        } else {
+            return nil
+        }
+    }
+    
     init() {}
     
     func authenticate(with email: String, and password: String, completion: @escaping (Result<User, Error>) -> Void) {

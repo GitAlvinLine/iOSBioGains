@@ -23,10 +23,21 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         self.window = window
         
         if let user = app.currentUser {
+            let tabbar = UITabBarController()
+            
             let user = User(email: user.profile.email ?? "", name: user.profile.name ?? "")
             let homeVC = HomeViewController(user: user, authClient: realmAuthClient, router: router)
-            router.viewControllers = [homeVC]
-            self.window?.rootViewController = router
+            
+            let profileNavigation = UINavigationController(rootViewController: homeVC)
+            let personalTrainerNavigation = UINavigationController(rootViewController: UIViewController())
+            
+            profileNavigation.tabBarItem = UITabBarItem(title: "Profile", image: nil, tag: 1)
+            personalTrainerNavigation.tabBarItem = UITabBarItem(title: "Trainer", image: nil, tag: 0)
+            
+            tabbar.viewControllers = [personalTrainerNavigation, profileNavigation]
+            tabbar.selectedIndex = 1
+            
+            self.window?.rootViewController = tabbar
             self.window?.makeKeyAndVisible()
         } else {
             let loginVC = LoginViewController(authClient: realmAuthClient, router: router)
