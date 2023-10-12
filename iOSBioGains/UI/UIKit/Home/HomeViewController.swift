@@ -15,22 +15,26 @@ class HomeViewController: UIViewController {
     let loadingIndicator: UIActivityIndicatorView = UIActivityIndicatorView(style: .large)
     let alert: UIAlertController = UIAlertController(title: nil, message: nil, preferredStyle: .alert)
     let action: UIAlertAction = UIAlertAction(title: "OK", style: .default)
-    var user: User?
+    private let user: User
     var authClient: AuthenticatorClient?
     var router: UINavigationController?
     
-    convenience init(user: User, authClient: AuthenticatorClient, router: UINavigationController) {
-        self.init()
+    init(user: User, authClient: AuthenticatorClient, router: UINavigationController) {
         self.user = user
         self.authClient = authClient
         self.router = router
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("We are not using storyboards")
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIScreen.main.traitCollection.userInterfaceStyle == .light ? .white : .black
         
-        userEmail.text = user?.email ?? ""
+        userEmail.text = user.email
         userEmail.textColor = UIScreen.main.traitCollection.userInterfaceStyle == .light ? .black : .white
         userEmail.font = .preferredFont(forTextStyle: .largeTitle)
         userEmail.textAlignment = .center
@@ -117,9 +121,34 @@ class HomeViewController: UIViewController {
 }
 
 struct HomeVC_Preview: PreviewProvider {
+    
+    private final class MockAuthClient: AuthenticatorClient {
+        func resetPassword(with email: String, completion: @escaping (AuthenticatorClientResult.Reset) -> Void) {
+            
+        }
+        
+        func authenticate(with email: String, and password: String, completion: @escaping (Result<User, Error>) -> Void) {
+            
+        }
+        
+        func logOut(completion: @escaping (AuthenticatorClientResult.LogOut) -> Void) {
+            
+        }
+        
+        func signUp(with email: String, and password: String, completion: @escaping (AuthenticatorClientResult.SignUp) -> Void) {
+            
+        }
+        
+        func deleteUser(completion: @escaping (AuthenticatorClientResult.DeleteUser) -> Void) {
+            
+        }
+    }
+    
     struct HomeVCView: UIViewControllerRepresentable {
         func makeUIViewController(context: Context) -> HomeViewController {
-            return HomeViewController()
+            let user = User(email: "johnDoe@gmail.com", name: "John Doe")
+            let authClient = MockAuthClient()
+            return HomeViewController(user: user, authClient: authClient, router: UINavigationController())
         }
         
         func updateUIViewController(_ uiViewController: HomeViewController, context: Context) {
@@ -129,5 +158,6 @@ struct HomeVC_Preview: PreviewProvider {
     
     static var previews: some View {
         HomeVCView()
+            .ignoresSafeArea()
     }
 }

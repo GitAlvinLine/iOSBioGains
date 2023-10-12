@@ -17,9 +17,8 @@ class RealmAuthenticatorClient: AuthenticatorClient {
         app.login(credentials: Credentials.emailPassword(email: email, password: password)) { result in
             switch result {
             case .success(let user):
-                if let email = user.profile.email,
-                   let name = user.profile.name {
-                    let appUser: User = User(email: email, name: name)
+                if let email = user.profile.email {
+                    let appUser: User = User(email: email, name: "")
                     completion(.success(appUser))
                 } else {
                     completion(.success(User(email: "", name: "")))
