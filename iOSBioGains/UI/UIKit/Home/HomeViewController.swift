@@ -11,13 +11,13 @@ import UIKit
 class HomeViewController: UIViewController {
     
     let userEmail: UILabel = UILabel()
-    let logoutButton: CustomButton = CustomButton(title: "Log Out")
+    let userAccountBarItem: UIBarButtonItem = UIBarButtonItem()
     let loadingIndicator: UIActivityIndicatorView = UIActivityIndicatorView(style: .large)
     let alert: UIAlertController = UIAlertController(title: nil, message: nil, preferredStyle: .alert)
     let action: UIAlertAction = UIAlertAction(title: "OK", style: .default)
     private let user: User
-    var authClient: AuthenticatorClient?
-    var router: UINavigationController?
+    private let authClient: AuthenticatorClient
+    private let router: UINavigationController
     
     init(user: User, authClient: AuthenticatorClient, router: UINavigationController) {
         self.user = user
@@ -48,17 +48,11 @@ class HomeViewController: UIViewController {
             userEmail.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -20),
         ])
         
-        self.view.addSubview(logoutButton)
-        
-        NSLayoutConstraint.activate([
-            logoutButton.heightAnchor.constraint(equalToConstant: 50),
-            logoutButton.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 20),
-            logoutButton.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -20),
-            logoutButton.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor, constant: -20)
-            
-        ])
-        
-        logOutButtonSetup()
+        userAccountBarItem.image = UIImage(systemName: "gear")!
+        userAccountBarItem.style = .done
+        userAccountBarItem.target = self
+        userAccountBarItem.action = #selector(userAccountBarItemTapped)
+        self.navigationItem.rightBarButtonItem = userAccountBarItem
         
         loadingIndicator.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(loadingIndicator)
@@ -79,31 +73,9 @@ class HomeViewController: UIViewController {
         self.userEmail.textColor = previousTraitCollection?.userInterfaceStyle == .light ? .white : .black
     }
     
-    private func logOutButtonSetup() {
-        logoutButton.addTarget(self, action: #selector(logOutUser), for: .touchUpInside)
-    }
-    
-    @objc private func logOutUser() {
-        self.startAnimatingLoadingIndicator()
-        authClient?.logOut { [weak self] result in
-            DispatchQueue.main.async {
-                switch result {
-                case .success:
-                    self?.stopAnimatingLoadingIndicator()
-                    
-                    guard let client = self?.authClient,
-                            let router = self?.router else { return }
-                    
-                    let loginVC = LoginViewController(authClient: client, router: router)
-                    let navigationController = UINavigationController(rootViewController: loginVC)
-                    navigationController.modalPresentationStyle = .fullScreen
-                    self?.present(navigationController, animated: false)
-                case .failure(let error):
-                    self?.stopAnimatingLoadingIndicator()
-                    self?.showAlertError(error)
-                }
-            }
-        }
+    @objc func userAccountBarItemTapped() {
+        let userAccountVC = UserAccountVC(user: user, authClient: authClient, router: router)
+        self.navigationController?.pushViewController(userAccountVC, animated: true)
     }
     
     private func startAnimatingLoadingIndicator() {

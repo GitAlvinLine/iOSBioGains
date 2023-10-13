@@ -40,7 +40,7 @@ class UserAccountVC: UIViewController {
             logoutButton.heightAnchor.constraint(equalToConstant: 50),
             logoutButton.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 20),
             logoutButton.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -20),
-            logoutButton.bottomAnchor.constraint(equalTo: self.deleteAccountButton.topAnchor, constant: -20)
+            logoutButton.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor, constant: -90)
             
         ])
         
