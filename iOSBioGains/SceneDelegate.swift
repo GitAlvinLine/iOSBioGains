@@ -32,8 +32,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             let profileNavigation = UINavigationController(rootViewController: homeVC)
             let personalTrainerNavigation = UINavigationController(rootViewController: trainerChatVC)
             
-            profileNavigation.tabBarItem = UITabBarItem(title: "Profile", image: nil, tag: 1)
-            personalTrainerNavigation.tabBarItem = UITabBarItem(title: "Trainer", image: nil, tag: 0)
+            profileNavigation.tabBarItem = UITabBarItem(title: "Profile", image: UIImage(systemName: "person.fill")!, tag: 1)
+            personalTrainerNavigation.tabBarItem = UITabBarItem(title: "Trainer", image: UIImage(systemName: "figure.strengthtraining.traditional")!, tag: 0)
             
             tabbar.viewControllers = [personalTrainerNavigation, profileNavigation]
             tabbar.selectedIndex = 1
