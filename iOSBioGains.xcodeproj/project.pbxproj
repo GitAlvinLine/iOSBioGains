@@ -11,6 +11,7 @@
 		DB006E7E2AD799CE001439E2 /* ResetPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB006E7D2AD799CE001439E2 /* ResetPasswordVC.swift */; };
 		DB006E812AD8A9F7001439E2 /* RoutingMananger.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB006E802AD8A9F7001439E2 /* RoutingMananger.swift */; };
 		DB006E842AD8B9FF001439E2 /* TrainerChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB006E832AD8B9FF001439E2 /* TrainerChatVC.swift */; };
+		DB006E872AD8DAF0001439E2 /* UserAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB006E862AD8DAF0001439E2 /* UserAccountVC.swift */; };
 		DB1B25872AA97FD90056055B /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1B25862AA97FD90056055B /* LoginView.swift */; };
 		DB2AE1722AB75F29007F2907 /* LoginUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2AE1712AB75F29007F2907 /* LoginUIView.swift */; };
 		DB2AE1762AB80FB7007F2907 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2AE1752AB80FB7007F2907 /* CustomButton.swift */; };
@@ -46,6 +47,7 @@
 		DB006E7D2AD799CE001439E2 /* ResetPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordVC.swift; sourceTree = "<group>"; };
 		DB006E802AD8A9F7001439E2 /* RoutingMananger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutingMananger.swift; sourceTree = "<group>"; };
 		DB006E832AD8B9FF001439E2 /* TrainerChatVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainerChatVC.swift; sourceTree = "<group>"; };
+		DB006E862AD8DAF0001439E2 /* UserAccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAccountVC.swift; sourceTree = "<group>"; };
 		DB1B25862AA97FD90056055B /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		DB2AE1712AB75F29007F2907 /* LoginUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUIView.swift; sourceTree = "<group>"; };
 		DB2AE1752AB80FB7007F2907 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
@@ -120,6 +122,14 @@
 			path = TrainerChat;
 			sourceTree = "<group>";
 		};
+		DB006E852AD8DAD2001439E2 /* UserAccount */ = {
+			isa = PBXGroup;
+			children = (
+				DB006E862AD8DAF0001439E2 /* UserAccountVC.swift */,
+			);
+			path = UserAccount;
+			sourceTree = "<group>";
+		};
 		DB2AE1772AB91CD3007F2907 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -170,6 +180,7 @@
 			isa = PBXGroup;
 			children = (
 				DB2AE18C2ABA9BD1007F2907 /* HomeViewController.swift */,
+				DB006E852AD8DAD2001439E2 /* UserAccount */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -362,6 +373,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB006E872AD8DAF0001439E2 /* UserAccountVC.swift in Sources */,
 				DB2AE1792AB91CE7007F2907 /* LoginCredentials.swift in Sources */,
 				DB2AE1722AB75F29007F2907 /* LoginUIView.swift in Sources */,
 				DB2AE17E2AB944A8007F2907 /* CustomProgressView.swift in Sources */,
